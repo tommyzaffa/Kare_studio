@@ -1227,6 +1227,9 @@ body.menu-open .burger { opacity: 0; pointer-events: none; }
   opacity: 0.55;
 }
 
+.footer__credit a { text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.3s; }
+.footer__credit a:hover { opacity: 0.7; }
+
 /* ============================================================
    RESPONSIVE — TABLET
    ============================================================ */

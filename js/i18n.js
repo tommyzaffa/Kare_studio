@@ -206,6 +206,7 @@ const I18N = {
     "footer.people": "Persone",
     "footer.contact": "Contatti",
     "footer.rights": "© 2026 Kare Studio. Tutti i diritti riservati.",
+    "footer.credit": "Sito creato e sviluppato da",
   },
 
   /* ---------------------------------------------------------- */
@@ -408,6 +409,7 @@ const I18N = {
     "footer.people": "People",
     "footer.contact": "Contact",
     "footer.rights": "© 2026 Kare Studio. All rights reserved.",
+    "footer.credit": "Website designed and developed by",
   },
 
   /* ---------------------------------------------------------- */
@@ -610,6 +612,7 @@ const I18N = {
     "footer.people": "Les personnes",
     "footer.contact": "Contact",
     "footer.rights": "© 2026 Kare Studio. Tous droits réservés.",
+    "footer.credit": "Site créé et développé par",
   },
 
   /* ---------------------------------------------------------- */
@@ -812,6 +815,7 @@ const I18N = {
     "footer.people": "Personen",
     "footer.contact": "Kontakt",
     "footer.rights": "© 2026 Kare Studio. Alle Rechte vorbehalten.",
+    "footer.credit": "Website erstellt und entwickelt von",
   },
 };
 
