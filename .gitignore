@@ -1,0 +1,30 @@
+# --- Sistema operativo ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# --- File di Claude / AI ---
+.claude/
+CLAUDE.md
+.claude-cache/
+
+# --- Reference di lavoro (screenshot del sito di ispirazione, non vanno online) ---
+screen/
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Eventuali dipendenze o build future ---
+node_modules/
+dist/
+.cache/
+
+# --- File sensibili ---
+.env
+.env.*
+*.log
