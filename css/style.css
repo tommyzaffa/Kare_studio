@@ -777,6 +777,13 @@ body.menu-open .burger { opacity: 0; pointer-events: none; }
   gap: clamp(1rem, 2vw, 2rem);
 }
 
+/* variante a 3 colonne (info contatti) */
+.people-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* evita che contenuti non spezzabili (es. email) sfondino la griglia */
+.people-grid > * { min-width: 0; }
+.people-grid a { overflow-wrap: anywhere; }
+
 .person-card { position: relative; display: block; }
 
 .person-card__media {
