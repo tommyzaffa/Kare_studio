@@ -339,6 +339,41 @@ body.menu-open .header {
 
 .menu-overlay.is-open { clip-path: inset(0 0 0 0); visibility: visible; }
 
+/* X di chiusura del menu mobile */
+.menu-overlay__close {
+  position: absolute;
+  top: 1.05rem;
+  right: var(--pad);
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(241, 237, 229, 0.45);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+  transition: opacity 0.5s ease 0.35s, transform 0.6s var(--ease-smooth) 0.35s, background 0.3s ease;
+}
+
+.menu-overlay__close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 1.5px;
+  background: var(--cream);
+}
+
+.menu-overlay__close span:nth-child(1) { transform: translate(-50%, -50%) rotate(45deg); }
+.menu-overlay__close span:nth-child(2) { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.menu-overlay.is-open .menu-overlay__close { opacity: 1; transform: rotate(0deg) scale(1); }
+.menu-overlay__close:hover { background: rgba(241, 237, 229, 0.14); }
+
+/* col menu aperto nascondiamo il burger: la chiusura passa dalla X dedicata */
+body.menu-open .burger { opacity: 0; pointer-events: none; }
+
 .menu-overlay nav { display: flex; flex-direction: column; gap: 0.4rem; }
 
 .menu-overlay nav > a {

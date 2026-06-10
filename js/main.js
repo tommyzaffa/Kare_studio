@@ -98,20 +98,29 @@
   const overlay = document.querySelector(".menu-overlay");
 
   if (burger && overlay) {
+    const closeMenu = () => {
+      overlay.classList.remove("is-open");
+      burger.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+      document.body.style.overflow = "";
+    };
+
     burger.addEventListener("click", () => {
       const open = overlay.classList.toggle("is-open");
       burger.classList.toggle("is-open", open);
       document.body.classList.toggle("menu-open", open);
       document.body.style.overflow = open ? "hidden" : "";
     });
-    overlay.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        overlay.classList.remove("is-open");
-        burger.classList.remove("is-open");
-        document.body.classList.remove("menu-open");
-        document.body.style.overflow = "";
-      })
-    );
+
+    const closeBtn = overlay.querySelector(".menu-overlay__close");
+    if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+    overlay.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+    // chiusura anche con il tasto ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("is-open")) closeMenu();
+    });
   }
 
   /* ----------------------------------------------------------
