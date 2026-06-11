@@ -162,6 +162,36 @@
     go(0);
   });
 
+  /* ---------- Ricerca blog ----------
+     Filtra le card del blog in tempo reale in base al testo digitato
+     (titolo, categoria ed estratto). */
+  const blogSearchInput = document.querySelector('.blog-search input');
+  const blogGrid = document.querySelector('.blog-grid');
+  if (blogSearchInput && blogGrid) {
+    const cards = blogGrid.querySelectorAll('.post-card');
+    const emptyMsg = document.createElement('p');
+    emptyMsg.className = 'search-empty';
+    emptyMsg.textContent = 'Nessun articolo trovato. Prova con un\u2019altra parola.';
+    emptyMsg.style.display = 'none';
+    blogGrid.parentElement.appendChild(emptyMsg);
+
+    blogSearchInput.addEventListener('input', () => {
+      const q = blogSearchInput.value.toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || card.textContent.toLowerCase().includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) {
+          visible++;
+          /* le card sono .reveal: se non sono ancora state rivelate
+             dallo scroll, forziamo la visibilità per non mostrarle vuote */
+          card.classList.add('is-visible');
+        }
+      });
+      emptyMsg.style.display = visible === 0 ? '' : 'none';
+    });
+  }
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');

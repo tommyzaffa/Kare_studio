@@ -1306,7 +1306,12 @@ body.menu-open .mobile-menu { display: flex; }
   .ns-cols { grid-template-columns: 1fr; }
   .wf .two-col { grid-template-columns: 1fr; }
   .industries .center-img { order: -1; max-width: 420px; }
-  .services-teaser .sticky-side, .process .sticky-img, .svc-detail .sticky-img { position: static; }
+  .services-teaser .sticky-side { position: static; }
+  /* niente sticky su mobile, ma il contenitore resta "relative":
+     i frame dell'img-loop sono in position absolute e senza un
+     contenitore posizionato finirebbero ancorati alla pagina
+     (sovrapponendosi all'hero) */
+  .process .sticky-img, .svc-detail .sticky-img { position: relative; top: auto; }
   .marquee-item { width: 280px; padding: 36px 26px; }
   .hero-card { height: calc(100svh - var(--header-h) - 28px); min-height: 460px; }
   .industries-list li { text-align: center; }
@@ -1339,6 +1344,9 @@ body.menu-open .mobile-menu { display: flex; }
   animation: marquee 26s linear infinite;
 }
 .press-logos.press-marquee:hover { animation-play-state: paused; }
+/* il marquee è animato via JS (transform): mai transition/opacità reveal qui,
+   altrimenti lo scroll si blocca e su mobile resta invisibile */
+.press-logos.press-marquee { opacity: 1 !important; transition: none !important; }
 .press-logos.press-marquee span {
   flex-shrink: 0;
   padding: 0 clamp(30px, 4.5vw, 70px);
@@ -1448,4 +1456,36 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 }
 @media (hover: none), (pointer: coarse) {
   .cursor-dot { display: none; }
+}
+
+/* ============================================================
+   FIX ROUND 4
+   ============================================================ */
+
+/* Ricerca blog: messaggio quando nessun articolo corrisponde */
+.search-empty {
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+  padding: 30px var(--pad) 10px;
+}
+
+/* Hero "Lavora con noi" su mobile: la regola desktop del FIX ROUND 2
+   (due colonne) arriva dopo il media query principale e lo sovrascriveva.
+   Qui ripristiniamo il layout a una colonna per gli schermi piccoli. */
+@media (max-width: 980px) {
+  .collab-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .collab-hero .c-img {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+  .collab-hero h1 {
+    max-width: none;
+    font-size: clamp(30px, 8.5vw, 42px);
+  }
+  .collab-hero .contact-cols { gap: 26px; margin-top: 32px; }
 }
