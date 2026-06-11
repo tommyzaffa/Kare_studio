@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavora con noi — Kare Studio</title>
+<meta name="description" content="Raccontaci il tuo progetto: ti rispondiamo entro pochi giorni con una proposta su misura.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Kare Studio</a>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item">
+          <a href="studio.html#team" class="nav-link" data-i18n="nav.services">Servizi</a>
+          <ul class="dropdown">
+            <li><a href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a></li>
+            <li><a href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a></li>
+            <li><a href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a></li>
+            <li><a href="servizi-video.html" data-i18n="nav.svcVideo">Video</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="studio.html" class="nav-link" data-i18n="nav.studio">Lo Studio</a></li>
+        <li class="nav-item"><a href="lavori.html" class="nav-link" data-i18n="nav.work">Lavori</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn js-lang-current" aria-haspopup="true">IT ▾</button>
+        <div class="lang-menu">
+          <button data-lang="it" class="is-current">Italiano</button>
+          <button data-lang="en">English</button>
+          <button data-lang="fr">Français</button>
+          <button data-lang="de">Deutsch</button>
+        </div>
+      </div>
+      <a href="collabora.html" class="pill" data-i18n="nav.cta">Lavora con noi</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="studio.html#team" data-i18n="nav.services">Servizi</a>
+  <div class="sub">
+    <a href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a>
+    <a href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a>
+    <a href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a>
+    <a href="servizi-video.html" data-i18n="nav.svcVideo">Video</a>
+  </div>
+  <a href="studio.html" data-i18n="nav.studio">Lo Studio</a>
+  <a href="lavori.html" data-i18n="nav.work">Lavori</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="collabora.html" data-i18n="nav.cta">Lavora con noi</a>
+  <div class="m-langs">
+    <button data-lang="it" class="is-current">IT</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="de">DE</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="collab-hero" data-bg="cream">
+    <div class="c-img reveal"><img src="img/studio-space-02.png" alt=""></div>
+    <div class="reveal reveal-d1">
+      <span class="eyebrow" data-i18n="collab.eyebrow">Lavora con noi</span>
+      <h1 data-i18n="collab.h1">Raccontaci il tuo progetto. Al resto pensiamo noi.</h1>
+      <p data-i18n="collab.sub">Compila il form qui sotto: ci bastano poche righe per capire chi sei e di cosa hai bisogno. Ti rispondiamo entro pochi giorni con un punto di vista sincero — e, se ha senso, una proposta su misura. Gratuita e senza impegno.</p>
+      <div class="contact-cols">
+        <div>
+          <h4 data-i18n="collab.cEmail">Email</h4>
+          <p><a href="mailto:hello@karestudio.it">hello@karestudio.it</a></p>
+        </div>
+        <div>
+          <h4 data-i18n="collab.cSocial">Social</h4>
+          <p><a href="#">Instagram</a> · <a href="#">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" data-bg="cream">
+    <aside class="form-side reveal">
+      <h4 data-i18n="collab.sideT">Cosa puoi aspettarti</h4>
+      <ul>
+        <li data-i18n="collab.side1">Risposta entro due giorni lavorativi</li>
+        <li data-i18n="collab.side2">Una call conoscitiva gratuita</li>
+        <li data-i18n="collab.side3">Una proposta su misura, senza pacchetti standard</li>
+        <li data-i18n="collab.side4">Nessun impegno fino alla firma</li>
+      </ul>
+    </aside>
+    <form class="wf reveal reveal-d1" data-formspree>
+      <input type="hidden" name="_subject" value="Nuova richiesta dal form — Kare Studio">
+
+      <div class="group two-col">
+        <div>
+          <label data-i18n="collab.fName">Nome e cognome <span class="req" data-i18n="collab.req">(obbligatorio)</span></label>
+          <input type="text" name="nome" required>
+        </div>
+        <div>
+          <label data-i18n="collab.fEmail">Indirizzo email <span class="req" data-i18n="collab.req2">(obbligatorio)</span></label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="group two-col">
+        <div>
+          <label data-i18n="collab.fBrand">Nome del brand / attività</label>
+          <input type="text" name="brand">
+        </div>
+        <div>
+          <label data-i18n="collab.fSite">Sito web o profilo social</label>
+          <input type="text" name="sito">
+        </div>
+      </div>
+
+      <div class="group">
+        <label data-i18n="collab.fHow">Come ci hai conosciuto?</label>
+        <select name="come">
+          <option value="" data-i18n="collab.hSel">Seleziona…</option>
+          <option data-i18n="collab.h1o">Instagram</option>
+          <option data-i18n="collab.h2o">Passaparola</option>
+          <option data-i18n="collab.h3o">Ricerca su Google</option>
+          <option data-i18n="collab.h4o">Ho visto un vostro progetto</option>
+          <option data-i18n="collab.h5o">Altro</option>
+        </select>
+      </div>
+
+      <div class="group">
+        <label data-i18n="collab.fSvc">Di quali rami dello studio hai bisogno?</label>
+        <p class="hint" data-i18n="collab.fSvcHint">Puoi selezionarne più di uno. E se non lo sai, nessun problema: te lo diremo noi.</p>
+        <div class="checks">
+          <label><input type="checkbox" name="servizi" value="social"> <span data-i18n="nav.svcSocial">Social Media &amp; Content</span></label>
+          <label><input type="checkbox" name="servizi" value="creativo"> <span data-i18n="nav.svcCreative">Direzione Creativa</span></label>
+          <label><input type="checkbox" name="servizi" value="foto"> <span data-i18n="nav.svcPhoto">Fotografia</span></label>
+          <label><input type="checkbox" name="servizi" value="video"> <span data-i18n="nav.svcVideo">Video</span></label>
+          <label><input type="checkbox" name="servizi" value="non-so"> <span data-i18n="collab.svcUnknown">Non lo so ancora</span></label>
+        </div>
+      </div>
+
+      <div class="group two-col">
+        <div>
+          <label data-i18n="collab.fBudget">Budget indicativo</label>
+          <select name="budget">
+            <option value="" data-i18n="collab.bSel">Seleziona…</option>
+            <option data-i18n="collab.b1">Meno di 1.000 €</option>
+            <option data-i18n="collab.b2">1.000 — 3.000 €</option>
+            <option data-i18n="collab.b3">3.000 — 8.000 €</option>
+            <option data-i18n="collab.b4">Oltre 8.000 €</option>
+            <option data-i18n="collab.b5">Da definire insieme</option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n="collab.fWhen">Quando vorresti iniziare?</label>
+          <select name="tempistiche">
+            <option value="" data-i18n="collab.wSel">Seleziona…</option>
+            <option data-i18n="collab.w1">Il prima possibile</option>
+            <option data-i18n="collab.w2">Entro 1-2 mesi</option>
+            <option data-i18n="collab.w3">Entro 6 mesi</option>
+            <option data-i18n="collab.w4">Sto solo esplorando</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group">
+        <label data-i18n="collab.fStory">Raccontaci il tuo progetto <span class="req" data-i18n="collab.req3">(obbligatorio)</span></label>
+        <p class="hint" data-i18n="collab.fStoryHint">Chi sei, cosa fai, cosa senti che manca al tuo brand. Scrivi come parli: ci serve capirti, non un brief perfetto.</p>
+        <textarea name="progetto" required></textarea>
+      </div>
+
+      <div class="group">
+        <label data-i18n="collab.fMore">C'è altro che dovremmo sapere?</label>
+        <textarea name="altro"></textarea>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="pill" data-i18n="collab.send">Invia la richiesta</button>
+        <p class="form-msg" data-ok="Richiesta inviata. Ti rispondiamo entro pochi giorni!" data-err="Si è verificato un errore. Riprova o scrivici via email."></p>
+      </div>
+    </form>
+  </section>
+
+  <!-- NEXT STEPS (dark) -->
+  <section class="next-steps on-dark" data-bg="dark">
+    <h2 class="reveal" data-i18n="collab.nsTitle">Cosa succede <em>dopo</em> l'invio?</h2>
+    <div class="ns-cols">
+      <div class="ns-col reveal">
+        <span class="num">01.</span>
+        <h3 data-i18n="collab.ns1t">Ti leggiamo, con calma</h3>
+        <p data-i18n="collab.ns1p">La tua richiesta arriva direttamente a noi quattro. La leggiamo con attenzione e capiamo quale ramo (o combinazione di rami) fa al caso tuo.</p>
+      </div>
+      <div class="ns-col reveal reveal-d1">
+        <span class="num">02.</span>
+        <h3 data-i18n="collab.ns2t">Call conoscitiva gratuita</h3>
+        <p data-i18n="collab.ns2p">Entro pochi giorni ti proponiamo una call di 30 minuti: tu ci racconti il progetto dal vivo, noi ti diciamo cosa faremmo — senza impegno.</p>
+      </div>
+      <div class="ns-col reveal reveal-d2">
+        <span class="num">03.</span>
+        <h3 data-i18n="collab.ns3t">Proposta su misura</h3>
+        <p data-i18n="collab.ns3p">Se decidiamo di lavorare insieme, ricevi una proposta chiara: cosa facciamo, in quanto tempo e a quale investimento. Tutto nero su bianco.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wordmark"><span>Kare Studio</span></div>
+  <div class="footer-main">
+    <div class="footer-about">
+      <p data-i18n="footer.about">Kare Studio è uno studio creativo formato da quattro professionisti — social media, direzione creativa, fotografia e video — al servizio di brand che vogliono crescere con intenzione.</p>
+      <p class="tagline" data-i18n="footer.tagline">Quattro rami, un unico studio. Con base in Italia.</p>
+      <a href="collabora.html" class="pill" data-i18n="nav.cta">Lavora con noi</a>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="studio.html" data-i18n="nav.studio">Lo Studio</a></li>
+        <li><a href="studio.html#team" data-i18n="nav.services">Servizi</a></li>
+        <li><a href="lavori.html" data-i18n="nav.work">Lavori</a></li>
+        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="index.html#faq" data-i18n="footer.faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="footer-side">
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Vimeo">VM</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+      <p class="micro" data-i18n="footer.micro">Curiosə di sapere come lavoriamo e con chi?</p>
+      <a href="collabora.html" class="arrow-link" data-i18n="footer.microLink">Scrivici due righe <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span class="js-year"></span> Kare Studio</span>
+    <span data-i18n="footer.rights">Tutti i diritti riservati</span>
+    <span data-i18n="footer.credit">Sito creato e sviluppato da <a href="https://tommyzaffa.com" target="_blank" rel="noopener">Thomas Zaffalon</a></span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

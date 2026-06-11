@@ -1,276 +1,443 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kare Studio — Studio creativo</title>
-  <meta name="description" content="Kare Studio: quattro voci creative indipendenti — strategia, direzione creativa, fotografia e video — un unico studio." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kare Studio — Studio creativo a quattro anime</title>
+<meta name="description" content="Kare Studio: social media, direzione creativa, fotografia e video. Quattro professionisti, un unico studio al servizio del tuo brand.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="intro-veil"><span>Kare Studio</span></div>
 
-  <!-- PRELOADER -->
-  <div class="preloader"><div class="preloader__word">KARE STUDIO</div></div>
-
-  <!-- HEADER -->
-  <header class="header header--over-hero">
+<header class="site-header">
+  <div class="header-inner">
     <a href="index.html" class="logo">Kare Studio</a>
-
-    <nav class="nav-desktop">
-      <a href="studio.html" data-i18n="nav.studio">Lo Studio</a>
-      <div class="nav-drop">
-        <a href="studio.html#team" data-i18n="nav.people">Persone</a>
-        <div class="nav-drop__menu">
-          <a href="federico.html">Federico Benedetti <small data-i18n="role.federico">Social Media Manager &amp; Creative Strategist</small></a>
-          <a href="donato.html">Donato Scaglione <small data-i18n="role.donato">Creative Director</small></a>
-          <a href="francesca.html">Francesca Zama <small data-i18n="role.francesca">Fotografa</small></a>
-          <a href="eliot.html">Eliot Moreau <small data-i18n="role.eliot">Videomaker</small></a>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item">
+          <a href="studio.html#team" class="nav-link" data-i18n="nav.services">Servizi</a>
+          <ul class="dropdown">
+            <li><a href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a></li>
+            <li><a href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a></li>
+            <li><a href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a></li>
+            <li><a href="servizi-video.html" data-i18n="nav.svcVideo">Video</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="studio.html" class="nav-link" data-i18n="nav.studio">Lo Studio</a></li>
+        <li class="nav-item"><a href="lavori.html" class="nav-link" data-i18n="nav.work">Lavori</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn js-lang-current" aria-haspopup="true">IT ▾</button>
+        <div class="lang-menu">
+          <button data-lang="it" class="is-current">Italiano</button>
+          <button data-lang="en">English</button>
+          <button data-lang="fr">Français</button>
+          <button data-lang="de">Deutsch</button>
         </div>
       </div>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
+      <a href="collabora.html" class="pill" data-i18n="nav.cta">Lavora con noi</a>
     </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span></button>
+  </div>
+</header>
 
-    <div class="header__right">
-      <div class="lang">
-        <button data-lang="it">IT</button>
-        <button data-lang="en">EN</button>
-        <button data-lang="fr">FR</button>
-        <button data-lang="de">DE</button>
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="studio.html#team" data-i18n="nav.services">Servizi</a>
+  <div class="sub">
+    <a href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a>
+    <a href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a>
+    <a href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a>
+    <a href="servizi-video.html" data-i18n="nav.svcVideo">Video</a>
+  </div>
+  <a href="studio.html" data-i18n="nav.studio">Lo Studio</a>
+  <a href="lavori.html" data-i18n="nav.work">Lavori</a>
+  <a href="blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="collabora.html" data-i18n="nav.cta">Lavora con noi</a>
+  <div class="m-langs">
+    <button data-lang="it" class="is-current">IT</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="fr">FR</button>
+    <button data-lang="de">DE</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" data-bg="cream">
+    <div class="hero-card">
+      <img src="img/hero-home.png" alt="Kare Studio">
+      <div class="hero-copy">
+        <h1 data-i18n="home.hero.title">Uno studio creativo, quattro anime al servizio del tuo brand</h1>
+        <p data-i18n="home.hero.sub">Pensato per il brand che stai diventando.</p>
       </div>
-      <a href="contatti.html" class="btn-pill" data-i18n="nav.cta">Lavora con noi</a>
-      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-  </header>
+  </section>
 
-  <!-- MENU MOBILE -->
-  <div class="menu-overlay">
-    <button class="menu-overlay__close" aria-label="Chiudi menu"><span></span><span></span></button>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="studio.html" data-i18n="nav.studio">Lo Studio</a>
-      <a href="blog.html" data-i18n="nav.blog">Blog</a>
-      <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
-    </nav>
-    <div class="menu-overlay__people">
-      <a href="federico.html">Federico Benedetti <small data-i18n="role.federico">Social Media Manager &amp; Creative Strategist</small></a>
-      <a href="donato.html">Donato Scaglione <small data-i18n="role.donato">Creative Director</small></a>
-      <a href="francesca.html">Francesca Zama <small data-i18n="role.francesca">Fotografa</small></a>
-      <a href="eliot.html">Eliot Moreau <small data-i18n="role.eliot">Videomaker</small></a>
+  <!-- INTRO SPLIT -->
+  <section class="intro-split" data-bg="cream">
+    <div class="intro-actions reveal">
+      <a href="collabora.html" class="pill" data-i18n="home.intro.btn1">Lavora con noi</a>
+      <a href="lavori.html" class="pill" data-i18n="home.intro.btn2">Guarda i nostri lavori</a>
     </div>
-    <div class="lang">
-      <button data-lang="it">IT</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="fr">FR</button>
-      <button data-lang="de">DE</button>
+    <div class="intro-text reveal reveal-d1">
+      <p class="lead" data-i18n="home.intro.lead">Kare Studio è uno studio creativo formato da quattro professionisti con percorsi diversi, uniti da un'unica idea: dare ai brand tutto ciò che serve per crescere, in un solo posto.</p>
+      <p class="body" data-i18n="home.intro.body">Social media, direzione creativa, fotografia e video: quattro rami indipendenti che puoi attivare singolarmente o insieme, secondo ciò di cui il tuo progetto ha davvero bisogno. Perché un buon brand si fa notare, ma un grande brand resta nella memoria.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES TEASER (dark) -->
+  <section class="services-teaser on-dark" data-bg="dark">
+    <div class="sticky-side">
+      <span class="eyebrow" data-i18n="home.svc.eyebrow">Esplora i nostri servizi</span>
+      <h2 class="reveal" data-i18n="home.svc.title">Quattro rami, un unico studio: i servizi che fanno crescere il tuo brand</h2>
+    </div>
+    <div class="service-rows">
+      <a class="service-row reveal" href="servizi-social.html">
+        <div class="thumb img-loop" data-interval="800">
+          <img src="img/loop-federico-f1.png" alt="">
+          <img src="img/loop-federico-f2.png" alt="">
+        </div>
+        <div>
+          <h3 data-i18n="home.svc.s1.t">Social Media &amp; Content Strategy</h3>
+          <p data-i18n="home.svc.s1.p">Strategia, contenuti e gestione dei canali per farti trovare dove il tuo pubblico passa il tempo.</p>
+          <span class="who" data-i18n="home.svc.s1.w">Federico Benedetti</span>
+        </div>
+      </a>
+      <a class="service-row reveal" href="servizi-creativo.html">
+        <div class="thumb img-loop" data-interval="800">
+          <img src="img/loop-donato-f1.png" alt="">
+          <img src="img/loop-donato-f2.png" alt="">
+        </div>
+        <div>
+          <h3 data-i18n="home.svc.s2.t">Direzione Creativa</h3>
+          <p data-i18n="home.svc.s2.p">Una visione coerente che tiene insieme identità, campagne e ogni punto di contatto del tuo brand.</p>
+          <span class="who" data-i18n="home.svc.s2.w">Donato Scaglione</span>
+        </div>
+      </a>
+      <a class="service-row reveal" href="servizi-foto.html">
+        <div class="thumb img-loop" data-interval="800">
+          <img src="img/loop-francesca-f1.png" alt="">
+          <img src="img/loop-francesca-f2.png" alt="">
+        </div>
+        <div>
+          <h3 data-i18n="home.svc.s3.t">Fotografia</h3>
+          <p data-i18n="home.svc.s3.p">Immagini pensate per raccontare prodotti, persone e spazi con uno sguardo editoriale.</p>
+          <span class="who" data-i18n="home.svc.s3.w">Francesca Zama</span>
+        </div>
+      </a>
+      <a class="service-row reveal" href="servizi-video.html">
+        <div class="thumb img-loop" data-interval="800">
+          <img src="img/loop-eliot-f1.png" alt="">
+          <img src="img/loop-eliot-f2.png" alt="">
+        </div>
+        <div>
+          <h3 data-i18n="home.svc.s4.t">Video</h3>
+          <p data-i18n="home.svc.s4.p">Dal concept al montaggio: video che danno ritmo e voce alla storia del tuo brand.</p>
+          <span class="who" data-i18n="home.svc.s4.w">Eliot</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA BAND (dark) — al posto del prodotto/carrello -->
+  <section class="cta-band on-dark" data-bg="dark">
+    <div class="band-img reveal"><img src="img/studio-space-01.png" alt=""></div>
+    <div class="reveal reveal-d1">
+      <p class="small-lead" data-i18n="home.cta.lead">Il tuo brand dovrebbe lavorare per te 24 ore su 24. Lo sta facendo?</p>
+      <h2 data-i18n="home.cta.title">Prenota una <span class="u">consulenza conoscitiva</span> con lo studio: capiamo insieme dove sei e <em class="italic">di quale ramo</em> hai davvero bisogno.</h2>
+      <p class="note" data-i18n="home.cta.note">→ Gratuita e senza impegno: bastano due minuti per scriverci.</p>
+      <a href="collabora.html" class="pill" data-i18n="home.cta.btn">Raccontaci il tuo progetto</a>
+    </div>
+  </section>
+
+  <!-- WORK GRID -->
+  <section class="work-section" data-bg="cream">
+    <h2 class="reveal" data-i18n="home.work.title">Brand in buona compagnia</h2>
+    <div class="work-grid">
+      <a class="work-card reveal" href="lavoro-studio-verde.html">
+        <img src="img/work-home-01.png" alt="">
+        <div class="meta"><span class="name">Studio Verde</span><span class="cat" data-i18n="home.work.c1">Hospitality</span></div>
+      </a>
+      <a class="work-card reveal reveal-d1" href="lavoro-atelier-nove.html">
+        <img src="img/work-home-02.png" alt="">
+        <div class="meta"><span class="name">Atelier Nove</span><span class="cat" data-i18n="home.work.c2">Moda</span></div>
+      </a>
+      <a class="work-card reveal" href="lavori.html">
+        <img src="img/work-home-03.png" alt="">
+        <div class="meta"><span class="name">Forno Diurno</span><span class="cat" data-i18n="home.work.c3">Food</span></div>
+      </a>
+      <a class="work-card reveal reveal-d1" href="lavori.html">
+        <img src="img/eliot-work-01.png" alt="">
+        <div class="meta"><span class="name">Linea Mare</span><span class="cat" data-i18n="home.work.c4">Beauty</span></div>
+      </a>
+    </div>
+    <div class="work-more reveal">
+      <a href="lavori.html" class="pill" data-i18n="home.work.btn">Guarda il portfolio</a>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries" data-bg="cream">
+    <div class="reveal">
+      <h2 data-i18n="home.ind.title">Al servizio di settori diversi, con lo stesso standard creativo</h2>
+      <div class="pill-wrap"><a href="collabora.html" class="pill" data-i18n="home.ind.btn">Inizia il tuo progetto</a></div>
+    </div>
+    <div class="center-img img-loop reveal reveal-d1" data-interval="800">
+      <img src="img/loop-work-home-01-f1.png" alt="">
+      <img src="img/loop-work-home-01-f2.png" alt="">
+      <img src="img/loop-work-home-01-f3.png" alt="">
+    </div>
+    <ul class="industries-list reveal reveal-d2">
+      <li data-i18n="home.ind.l1">Ristorazione &amp; Hospitality</li>
+      <li data-i18n="home.ind.l2">Moda &amp; Lifestyle</li>
+      <li data-i18n="home.ind.l3">Beauty &amp; Wellness</li>
+      <li data-i18n="home.ind.l4">Artigianato &amp; Design</li>
+      <li data-i18n="home.ind.l5">Eventi &amp; Cultura</li>
+      <li data-i18n="home.ind.l6">Sport &amp; Tempo libero</li>
+      <li data-i18n="home.ind.l7">Immobiliare &amp; Studi professionali</li>
+      <li data-i18n="home.ind.l8">E-commerce &amp; Startup</li>
+    </ul>
+  </section>
+
+  <!-- RESULTS MARQUEE (dark) -->
+  <section class="results on-dark" data-bg="dark">
+    <span class="eyebrow" data-i18n="home.res.eyebrow">Risultati che restano nel tempo</span>
+    <div class="marquee">
+      <div class="marquee-item"><span class="check">✓</span><p data-i18n="home.res.r1">Community che crescono mese dopo mese, senza scorciatoie</p></div>
+      <div class="marquee-item"><span class="check">✓</span><p data-i18n="home.res.r2">Identità visive che i clienti riconoscono al primo sguardo</p></div>
+      <div class="marquee-item"><span class="check">✓</span><p data-i18n="home.res.r3">Servizi fotografici che diventano il volto del brand</p></div>
+      <div class="marquee-item"><span class="check">✓</span><p data-i18n="home.res.r4">Video che raccontano in un minuto ciò che le parole non dicono</p></div>
+      <div class="marquee-item"><span class="check">✓</span><p data-i18n="home.res.r5">Un unico studio, quattro competenze che lavorano insieme</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (dark) -->
+  <section class="testimonials on-dark" data-bg="dark">
+    <h2 class="reveal" data-i18n="home.test.title">Scelti da chi fa impresa, <em class="italic">ogni giorno</em></h2>
+    <span class="eyebrow sub reveal" data-i18n="home.test.sub">Dal nostro studio, con cura</span>
+    <div class="t-carousel reveal">
+      <button class="t-arrow prev" aria-label="Precedente">←</button>
+      <div class="t-track-wrap">
+        <div class="t-track">
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q1a">«Kare Studio ha dato una direzione chiara alla nostra comunicazione. Dal feed Instagram al nuovo shooting, ogni pezzo finalmente parla la stessa lingua.»</p>
+              <p data-i18n="home.test.q1b">«Il bello è avere quattro professionisti diversi che si passano la palla senza che tu debba coordinare nulla.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-01.png" alt=""><span data-i18n="home.test.w1">Giulia R., founder di Studio Verde</span></div>
+          </div>
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q2a">«Lavorare con loro è stato il processo più fluido che abbia mai vissuto: brief chiari, tempi rispettati e un risultato sopra le aspettative.»</p>
+              <p data-i18n="home.test.q2b">«Le foto e i video del lancio li usiamo ancora oggi, a un anno di distanza.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-02.png" alt=""><span data-i18n="home.test.w2">Marco T., Atelier Nove</span></div>
+          </div>
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q3a">«Avevo bisogno di qualcuno che capisse il mio progetto prima ancora di aprirmi il preventivo. È esattamente quello che è successo.»</p>
+              <p data-i18n="home.test.q3b">«Se cerchi un partner creativo vero, e non un fornitore, sei nel posto giusto.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-03.png" alt=""><span data-i18n="home.test.w3">Elena B., Linea Mare</span></div>
+          </div>
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q4a">«La direzione creativa di Donato ha cambiato il modo in cui presentiamo il nostro lavoro. Tutto è più ordinato, riconoscibile, nostro.»</p>
+              <p data-i18n="home.test.q4b">«Non pensavamo che un piccolo brand potesse permettersi questa qualità.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-01.png" alt=""><span data-i18n="home.test.w4">Sara M., Forno Diurno</span></div>
+          </div>
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q5a">«Federico ha costruito un piano editoriale che finalmente riusciamo a seguire. La community è raddoppiata in sei mesi.»</p>
+              <p data-i18n="home.test.q5b">«E quando serve un contenuto extra, c'è sempre qualcuno dello studio pronto a entrare in campo.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-02.png" alt=""><span data-i18n="home.test.w5">Luca P., Officina Sud</span></div>
+          </div>
+          <div class="t-card">
+            <div class="quote">
+              <p data-i18n="home.test.q6a">«Il video di presentazione firmato da Eliot ci ha aperto porte che inseguivamo da anni: lo proiettiamo a ogni fiera.»</p>
+              <p data-i18n="home.test.q6b">«Professionalità e sensibilità rare da trovare insieme.»</p>
+            </div>
+            <div class="who"><img src="img/avatar-quote-03.png" alt=""><span data-i18n="home.test.w6">Anna C., Casa Lago</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="t-arrow next" aria-label="Successiva">→</button>
+    </div>
+    <a href="collabora.html" class="pill" data-i18n="home.test.btn">Lavora con noi</a>
+  </section>
+
+  <!-- WHY (dark) -->
+  <section class="why on-dark" data-bg="dark">
+    <div class="why-img reveal"><img src="img/studio-space-02.png" alt=""></div>
+    <div class="reveal reveal-d1">
+      <h2 data-i18n="home.why.title">Perché Kare Studio?</h2>
+      <div class="body">
+        <p data-i18n="home.why.p1">Ogni progetto che seguiamo aiuta un brand a evolvere verso una versione migliore di sé — garantito dal fatto che non lavoriamo mai a compartimenti stagni.</p>
+        <p data-i18n="home.why.p2">Siamo quattro professionisti indipendenti che hanno scelto di unire le forze: non un'agenzia tradizionale, ma uno studio dove ogni ramo ha un volto, un nome e una responsabilità diretta verso il risultato. Scegli un servizio o componili insieme: in ogni caso parli sempre con chi farà davvero il lavoro.</p>
+      </div>
+      <div class="tag-row">
+        <span class="tag" data-i18n="home.why.t1">Quattro specialisti, un solo interlocutore</span>
+        <span class="tag" data-i18n="home.why.t2">Approccio su misura, mai a pacchetto</span>
+        <span class="tag" data-i18n="home.why.t3">Cura artigianale dei dettagli</span>
+        <span class="tag" data-i18n="home.why.t4">Progetti seguiti dall'inizio alla fine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS (dark) -->
+  <section class="process on-dark" data-bg="dark">
+    <div class="sticky-img img-loop reveal" data-interval="800">
+      <img src="img/loop-manifesto-01-f1.png" alt="">
+      <img src="img/loop-manifesto-01-f2.png" alt="">
+      <img src="img/loop-manifesto-01-f3.png" alt="">
+    </div>
+    <div>
+      <div class="head reveal">
+        <span class="eyebrow" data-i18n="home.proc.eyebrow">Il nostro metodo</span>
+        <h2 data-i18n="home.proc.title">Pensato con intenzione, costruito per evolvere</h2>
+      </div>
+      <div class="step reveal">
+        <span class="num">01.</span>
+        <h3 data-i18n="home.proc.s1t">Ascolto</h3>
+        <p data-i18n="home.proc.s1p">Prima di progettare, capiamo cosa funziona già e cosa no: posizionamento, valori, voce e obiettivi. Questo allineamento diventa il filtro di ogni decisione successiva.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">02.</span>
+        <h3 data-i18n="home.proc.s2t">Direzione</h3>
+        <p data-i18n="home.proc.s2p">Definiamo la rotta creativa e quali rami dello studio attivare: a volte basta uno, spesso la magia nasce quando lavorano insieme.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">03.</span>
+        <h3 data-i18n="home.proc.s3t">Produzione</h3>
+        <p data-i18n="home.proc.s3p">Contenuti, shooting, video e materiali prendono forma con un calendario chiaro e revisioni condivise, senza sorprese.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">04.</span>
+        <h3 data-i18n="home.proc.s4t">Crescita</h3>
+        <p data-i18n="home.proc.s4p">Il lavoro non finisce alla consegna: ti lasciamo strumenti e linee guida per far evolvere il brand nel tempo, sapendo che è costruito su fondamenta solide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR BUILDERS (dark) -->
+  <section class="builders on-dark" data-bg="dark">
+    <div class="head reveal">
+      <h2 data-i18n="home.build.title">Per chi costruisce</h2>
+      <p data-i18n="home.build.sub">Perché far crescere un brand non dovrebbe essere una cosa da affrontare da soli.</p>
+    </div>
+    <div class="builders-grid">
+      <div class="builders-col reveal">
+        <div class="col-img"><img src="img/blog-01.png" alt=""></div>
+        <h3 data-i18n="home.build.c1t">Leggi il blog</h3>
+        <p data-i18n="home.build.c1p">Appunti dallo studio: strategia, design e comunicazione raccontati con storie vere, consigli onesti e note per chi vuole crescere con intenzione.</p>
+        <a href="blog.html" class="arrow-link" data-i18n="home.build.c1b">Leggi ora <span class="arr">→</span></a>
+      </div>
+      <div class="builders-col reveal reveal-d1">
+        <div class="col-img"><img src="img/blog-02.png" alt=""></div>
+        <h3 data-i18n="home.build.c2t">Raccontaci il tuo progetto</h3>
+        <p data-i18n="home.build.c2p">Ti sembra che al tuo brand manchi qualcosa, ma non sai da dove iniziare? Compila il form: ci bastano poche righe per capirti e tornare da te con un punto di vista sincero su cosa servirebbe davvero.</p>
+        <a href="collabora.html" class="arrow-link" data-i18n="home.build.c2b">Vai al form <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG CTA -->
+  <section class="big-cta" data-bg="cream">
+    <span class="eyebrow reveal" data-i18n="home.big.eyebrow">Pensato per il brand che stai diventando</span>
+    <h2 class="reveal reveal-d1" data-i18n="home.big.title">Il prossimo alleato del tuo brand ti aspetta.</h2>
+    <div class="btns reveal reveal-d2">
+      <a href="collabora.html" class="pill" data-i18n="home.big.btn1">Inizia la conversazione</a>
+      <a href="studio.html" class="pill" data-i18n="home.big.btn2">Scopri lo studio</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" data-bg="cream">
+    <h2 class="reveal" data-i18n="home.faq.title">FAQ — Quello che c'è da sapere</h2>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q1">Come capisco quale dei quattro servizi fa per me?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a1">Non devi capirlo da solo: scrivici attraverso il form raccontandoci il tuo progetto. Ti rispondiamo indicando il ramo (o la combinazione di rami) più adatto ai tuoi obiettivi, senza alcun impegno.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q2">Lavorate sempre tutti e quattro insieme?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a2">No. Ogni ramo dello studio è autonomo: puoi lavorare solo con Federico per i social, solo con Francesca per uno shooting, e così via. Quando il progetto lo richiede, i rami collaborano in modo coordinato.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q3">Quanto costa un progetto con Kare Studio?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a3">Dipende dal servizio e dalla portata del lavoro. Dopo la prima conversazione ti inviamo sempre una proposta chiara, con voci trasparenti e senza costi nascosti.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q4">Quanto dura in media un progetto?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a4">Uno shooting o un video possono richiedere poche settimane; un percorso di direzione creativa o una gestione social continuativa si sviluppano su più mesi. Definiamo insieme il calendario prima di iniziare.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q5">Seguite anche progetti fuori dall'Italia?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a5">Sì: lavoriamo in italiano, inglese, francese e tedesco e seguiamo regolarmente brand che operano all'estero, sia da remoto sia in trasferta.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q"><span data-i18n="home.faq.q6">Come si inizia?</span><span class="plus">+</span></button>
+      <div class="faq-a"><p data-i18n="home.faq.a6">Compila il form nella pagina “Lavora con noi”: ti rispondiamo entro pochi giorni per fissare una call conoscitiva gratuita.</p></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" data-bg="cream">
+    <div class="reveal">
+      <h3 data-i18n="nl.title">Non perderti un momento</h3>
+      <p data-i18n="nl.body">Iscriviti per ricevere aggiornamenti dallo studio, dietro le quinte e spunti per chi costruisce brand — direttamente nella tua inbox.</p>
+    </div>
+    <form class="nl-form reveal reveal-d1" data-formspree>
+      <input type="hidden" name="_subject" value="Nuova iscrizione newsletter — Kare Studio">
+      <div class="field"><input type="text" name="nome" data-i18n-ph="nl.name" placeholder="Nome" required></div>
+      <div class="field"><input type="email" name="email" data-i18n-ph="nl.email" placeholder="Indirizzo email" required></div>
+      <button type="submit" class="pill" data-i18n="nl.btn">Iscriviti</button>
+      <p class="nl-msg" data-ok="Iscrizione completata. Benvenutə!" data-err="Si è verificato un errore. Riprova."></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wordmark"><span>Kare Studio</span></div>
+  <div class="footer-main">
+    <div class="footer-about">
+      <p data-i18n="footer.about">Kare Studio è uno studio creativo formato da quattro professionisti — social media, direzione creativa, fotografia e video — al servizio di brand che vogliono crescere con intenzione.</p>
+      <p class="tagline" data-i18n="footer.tagline">Quattro rami, un unico studio. Con base in Italia.</p>
+      <a href="collabora.html" class="pill" data-i18n="nav.cta">Lavora con noi</a>
+    </div>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="studio.html" data-i18n="nav.studio">Lo Studio</a></li>
+        <li><a href="studio.html#team" data-i18n="nav.services">Servizi</a></li>
+        <li><a href="lavori.html" data-i18n="nav.work">Lavori</a></li>
+        <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="index.html#faq" data-i18n="footer.faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="footer-side">
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Vimeo">VM</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+      <p class="micro" data-i18n="footer.micro">Curiosə di sapere come lavoriamo e con chi?</p>
+      <a href="collabora.html" class="arrow-link" data-i18n="footer.microLink">Scrivici due righe <span class="arr">→</span></a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© <span class="js-year"></span> Kare Studio</span>
+    <span data-i18n="footer.rights">Tutti i diritti riservati</span>
+    <span data-i18n="footer.credit">Sito creato e sviluppato da <a href="https://tommyzaffa.com" target="_blank" rel="noopener">Thomas Zaffalon</a></span>
+  </div>
+</footer>
 
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__bg" data-parallax="0.12">
-        <img src="img/hero-home.png" alt="Kare Studio" />
-      </div>
-      <div class="hero__content">
-        <p class="eyebrow reveal" data-i18n="home.hero.eyebrow">Studio creativo — Italia</p>
-        <h1 class="display-xl hero__title reveal" style="--d:.12s" data-i18n="home.hero.title">Quattro voci creative, un unico studio.</h1>
-        <div class="hero__meta">
-          <p class="hero__sub reveal" style="--d:.24s" data-i18n="home.hero.sub">Kare Studio è il punto d'incontro di quattro percorsi indipendenti: strategia, direzione creativa, fotografia e video.</p>
-          <span class="hero__scroll reveal" style="--d:.36s" data-i18n="home.hero.scroll">Scorri</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- MANIFESTO con media inline che girano come video -->
-    <section class="section">
-      <div class="manifesto reveal">
-        <span class="eyebrow" data-i18n="home.manifesto.eyebrow">Manifesto</span>
-        <p>
-          <span data-i18n="home.manifesto.s1">Kare è una casa creativa</span><!--
-          --><span class="inline-media"><span class="ploop" data-frames="img/loop-manifesto-01-f1.png, img/loop-manifesto-01-f2.png, img/loop-manifesto-01-f3.png" data-interval="1300"></span></span><!--
-          --><span data-i18n="home.manifesto.s2">. Ognuno di noi segue i propri progetti, ma condividiamo lo stesso sguardo</span><!--
-          --><span class="inline-media"><span class="ploop" data-frames="img/loop-manifesto-02-f1.png, img/loop-manifesto-02-f2.png, img/loop-manifesto-02-f3.png" data-interval="1600"></span></span><!--
-          --><span data-i18n="home.manifesto.s3">: cura, ricerca e un'estetica che resta.</span>
-        </p>
-      </div>
-
-      <!-- MARQUEE -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span data-i18n="marquee.1">Strategia</span><span>✺</span>
-          <span data-i18n="marquee.2">Direzione creativa</span><span>✺</span>
-          <span data-i18n="marquee.3">Fotografia</span><span>✺</span>
-          <span data-i18n="marquee.4">Video</span><span>✺</span>
-          <span data-i18n="marquee.5">Contenuti</span><span>✺</span>
-          <span data-i18n="marquee.1">Strategia</span><span>✺</span>
-          <span data-i18n="marquee.2">Direzione creativa</span><span>✺</span>
-          <span data-i18n="marquee.3">Fotografia</span><span>✺</span>
-          <span data-i18n="marquee.4">Video</span><span>✺</span>
-          <span data-i18n="marquee.5">Contenuti</span><span>✺</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PERSONE -->
-    <section class="section">
-      <div class="section-head">
-        <span class="eyebrow reveal" data-i18n="home.people.eyebrow">Le persone</span>
-        <h2 class="display-lg reveal" style="--d:.1s" data-i18n="home.people.title">Un punto di partenza, quattro direzioni.</h2>
-      </div>
-
-      <div class="people-grid">
-        <a class="person-card reveal" href="federico.html">
-          <div class="person-card__media reveal-img"><img src="img/card-federico.png" alt="Federico Benedetti" /></div>
-          <span class="person-card__arrow">→</span>
-          <h3 class="person-card__name">Federico Benedetti</h3>
-          <p class="person-card__role" data-i18n="role.federico">Social Media Manager &amp; Creative Strategist</p>
-        </a>
-        <a class="person-card reveal" style="--d:.1s" href="donato.html">
-          <div class="person-card__media reveal-img"><img src="img/card-donato.png" alt="Donato Scaglione" /></div>
-          <span class="person-card__arrow">→</span>
-          <h3 class="person-card__name">Donato Scaglione</h3>
-          <p class="person-card__role" data-i18n="role.donato">Creative Director</p>
-        </a>
-        <a class="person-card reveal" style="--d:.2s" href="francesca.html">
-          <div class="person-card__media reveal-img"><img src="img/card-francesca.png" alt="Francesca Zama" /></div>
-          <span class="person-card__arrow">→</span>
-          <h3 class="person-card__name">Francesca Zama</h3>
-          <p class="person-card__role" data-i18n="role.francesca">Fotografa</p>
-        </a>
-        <a class="person-card reveal" style="--d:.3s" href="eliot.html">
-          <div class="person-card__media reveal-img"><img src="img/card-eliot.png" alt="Eliot Moreau" /></div>
-          <span class="person-card__arrow">→</span>
-          <h3 class="person-card__name">Eliot Moreau</h3>
-          <p class="person-card__role" data-i18n="role.eliot">Videomaker</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- LAVORI SELEZIONATI -->
-    <section class="section">
-      <div class="section-head">
-        <span class="eyebrow reveal" data-i18n="home.works.eyebrow">Lavori selezionati</span>
-        <h2 class="display-lg reveal" style="--d:.1s" data-i18n="home.works.title">Progetti che parlano da soli.</h2>
-      </div>
-
-      <div class="works">
-        <a class="work work--a reveal" href="federico.html">
-          <div class="work__media reveal-img">
-            <img src="img/work-home-01.png" alt="" />
-            <span class="work__tag" data-i18n="home.w1.cat">Strategia &amp; social</span>
-          </div>
-          <h3 class="work__title" data-i18n="home.w1.title">Aurea — Campagna di brand</h3>
-          <p class="work__cat" data-i18n="home.w1.cat">Strategia &amp; social</p>
-        </a>
-
-        <a class="work work--b reveal" href="francesca.html">
-          <div class="work__media reveal-img">
-            <img src="img/work-home-02.png" alt="" />
-            <span class="work__tag" data-i18n="home.w2.cat">Fotografia</span>
-          </div>
-          <h3 class="work__title" data-i18n="home.w2.title">Linfa — Serie editoriale</h3>
-          <p class="work__cat" data-i18n="home.w2.cat">Fotografia</p>
-        </a>
-
-        <!-- tile "video": foto in loop -->
-        <a class="work work--c reveal" href="eliot.html">
-          <div class="work__media reveal-img" style="aspect-ratio:3/4">
-            <span class="ploop" data-frames="img/loop-work-home-01-f1.png, img/loop-work-home-01-f2.png, img/loop-work-home-01-f3.png" data-interval="1200"></span>
-            <span class="work__tag" data-i18n="home.w3.cat">Video</span>
-          </div>
-          <h3 class="work__title" data-i18n="home.w3.title">Nove — Videoclip</h3>
-          <p class="work__cat" data-i18n="home.w3.cat">Video</p>
-        </a>
-
-        <a class="work work--d reveal" href="donato.html">
-          <div class="work__media reveal-img">
-            <img src="img/work-home-03.png" alt="" />
-            <span class="work__tag" data-i18n="home.w4.cat">Direzione creativa</span>
-          </div>
-          <h3 class="work__title" data-i18n="home.w4.title">Studio Otto — Identità visiva</h3>
-          <p class="work__cat" data-i18n="home.w4.cat">Direzione creativa</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ABOUT TEASER (banda scura) -->
-    <section class="dark-band">
-      <div class="split">
-        <div class="split__media reveal-img"><img src="img/studio-space-01.png" alt="Lo spazio di Kare Studio" /></div>
-        <div class="split__body">
-          <span class="eyebrow reveal" data-i18n="home.about.eyebrow">Lo studio</span>
-          <h2 class="display-md reveal" style="--d:.1s" data-i18n="home.about.title">Indipendenti per metodo, insieme per visione.</h2>
-          <p class="reveal" style="--d:.2s" data-i18n="home.about.text">Non siamo un'agenzia tradizionale: siamo quattro professionisti che hanno scelto di condividere uno spazio, una rete e uno standard di qualità. Da Kare ogni progetto trova la persona giusta — o le persone giuste.</p>
-          <a href="studio.html" class="btn-pill btn-pill--light reveal" style="--d:.3s" data-i18n="home.about.cta">Scopri lo studio</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-final">
-      <h2 class="display-lg reveal" data-i18n="cta.title">Hai un progetto in mente?</h2>
-      <a href="contatti.html" class="btn-pill reveal" style="--d:.15s" data-i18n="cta.btn">Parliamone</a>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter" style="margin-top:0">
-      <h2 class="display-md reveal" data-i18n="nl.title">Resta nel giro di Kare.</h2>
-      <p class="reveal" style="--d:.1s" data-i18n="nl.text">Una newsletter essenziale: progetti nuovi, dietro le quinte e qualche consiglio creativo. Niente spam, promesso.</p>
-      <!-- FORMSPREE: sostituire YOUR_NEWSLETTER_ID -->
-      <form class="newsletter__form reveal" style="--d:.2s" action="https://formspree.io/f/YOUR_NEWSLETTER_ID" method="POST" data-formspree data-ok-key="nl.ok" data-err-key="nl.err">
-        <input type="email" name="email" required data-i18n-ph="nl.placeholder" placeholder="La tua email" />
-        <button type="submit" data-i18n="nl.btn">Iscriviti</button>
-      </form>
-      <p class="form-status"></p>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__grid">
-      <div>
-        <p class="footer__brand">Kare Studio<small data-i18n="footer.tag">Studio creativo — Italia</small></p>
-      </div>
-      <div>
-        <h4 data-i18n="footer.explore">Esplora</h4>
-        <ul>
-          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="studio.html" data-i18n="nav.studio">Lo Studio</a></li>
-          <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
-          <li><a href="contatti.html" data-i18n="nav.contact">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 data-i18n="footer.people">Persone</h4>
-        <ul>
-          <li><a href="federico.html">Federico Benedetti</a></li>
-          <li><a href="donato.html">Donato Scaglione</a></li>
-          <li><a href="francesca.html">Francesca Zama</a></li>
-          <li><a href="eliot.html">Eliot Moreau</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 data-i18n="footer.contact">Contatti</h4>
-        <ul>
-          <li><a href="mailto:hello@karestudio.it">hello@karestudio.it</a></li>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span data-i18n="footer.rights">© 2026 Kare Studio. Tutti i diritti riservati.</span>
-      <span class="footer__credit"><span data-i18n="footer.credit">Sito creato e sviluppato da</span> <a href="https://tommyzaffa.com" target="_blank" rel="noopener">Thomas Zaffalon</a></span>
-      <span>IT · EN · FR · DE</span>
-    </div>
-  </footer>
-
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

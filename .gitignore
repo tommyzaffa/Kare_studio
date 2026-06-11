@@ -10,8 +10,19 @@ desktop.ini
 CLAUDE.md
 .claude-cache/
 
-# --- Reference di lavoro (screenshot del sito di ispirazione, non vanno online) ---
+# --- Reference di lavoro (screenshot e video del sito di ispirazione, non vanno online) ---
 screen/
+screen recording/
+
+# --- Appunti di lavoro interni ---
+ISTRUZIONI-PROSSIMA-CHAT.md
+
+# --- Font: vanno online solo i .woff2 generati, non i sorgenti
+#     .otf acquistati né le licenze/fatture (EULA Dinamo, ordine PP) ---
+fonts/DINAMO Order 2026-3737556/
+fonts/PPWriter/
+fonts/**/*.pdf
+fonts/**/*.otf
 
 # --- Editor / IDE ---
 .vscode/
