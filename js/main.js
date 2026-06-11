@@ -25,14 +25,29 @@
   window.addEventListener('scroll', onScrollHeader, { passive: true });
   onScrollHeader();
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- Mobile menu (due pannelli: voci principali / servizi) ---------- */
   const burger = document.querySelector('.burger');
-  if (burger) {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => {
+      document.body.classList.remove('menu-open');
+      mobileMenu.classList.remove('show-sub');
+    };
     burger.addEventListener('click', () => {
-      document.body.classList.toggle('menu-open');
+      const isOpen = document.body.classList.toggle('menu-open');
+      if (!isOpen) mobileMenu.classList.remove('show-sub');
     });
-    document.querySelectorAll('.mobile-menu a').forEach(a =>
-      a.addEventListener('click', () => document.body.classList.remove('menu-open'))
+    /* "Servizi ›" fa scorrere al pannello dei servizi */
+    mobileMenu.querySelectorAll('.mm-services').forEach(btn =>
+      btn.addEventListener('click', () => mobileMenu.classList.add('show-sub'))
+    );
+    /* "‹ Indietro" torna alle voci principali */
+    mobileMenu.querySelectorAll('.mm-back').forEach(btn =>
+      btn.addEventListener('click', () => mobileMenu.classList.remove('show-sub'))
+    );
+    /* clic su un link: chiude il menu e riparte dal pannello principale */
+    mobileMenu.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', closeMenu)
     );
   }
 

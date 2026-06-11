@@ -20,6 +20,8 @@
     "nav.work": "Work",
     "nav.blog": "Blog",
     "nav.cta": "Work with us",
+    "nav.back": "Back",
+    "nav.allServices": "All services",
 
     "home.hero.title": "One creative studio, four souls at the service of your brand",
     "home.hero.sub": "Designed for the brand you are becoming.",
@@ -448,6 +450,8 @@
     "nav.work": "Projets",
     "nav.blog": "Blog",
     "nav.cta": "Travaillons ensemble",
+    "nav.back": "Retour",
+    "nav.allServices": "Tous les services",
 
     "home.hero.title": "Un studio créatif, quatre âmes au service de votre marque",
     "home.hero.sub": "Pensé pour la marque que vous êtes en train de devenir.",
@@ -876,6 +880,8 @@
     "nav.work": "Projekte",
     "nav.blog": "Blog",
     "nav.cta": "Mit uns arbeiten",
+    "nav.back": "Zurück",
+    "nav.allServices": "Alle Leistungen",
 
     "home.hero.title": "Ein Kreativstudio, vier Seelen im Dienst Ihrer Marke",
     "home.hero.sub": "Gedacht für die Marke, die Sie gerade werden.",

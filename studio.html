@@ -43,23 +43,30 @@
 </header>
 
 <nav class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="studio.html#team" data-i18n="nav.services">Servizi</a>
-  <div class="sub">
-    <a href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a>
-    <a href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a>
-    <a href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a>
-    <a href="servizi-video.html" data-i18n="nav.svcVideo">Video</a>
+  <div class="mm-panels">
+    <div class="mm-panel mm-main">
+      <button class="mm-link mm-services"><span data-i18n="nav.services">Servizi</span> <span class="chev">›</span></button>
+      <a class="mm-link" href="studio.html" data-i18n="nav.studio">Lo Studio</a>
+      <a class="mm-link" href="lavori.html" data-i18n="nav.work">Lavori</a>
+      <a class="mm-link" href="blog.html" data-i18n="nav.blog">Blog</a>
+    </div>
+    <div class="mm-panel mm-sub">
+      <button class="mm-back"><span class="chev">‹</span> <span data-i18n="nav.back">Indietro</span></button>
+      <a class="mm-link" href="servizi-social.html" data-i18n="nav.svcSocial">Social Media &amp; Content</a>
+      <a class="mm-link" href="servizi-creativo.html" data-i18n="nav.svcCreative">Direzione Creativa</a>
+      <a class="mm-link" href="servizi-foto.html" data-i18n="nav.svcPhoto">Fotografia</a>
+      <a class="mm-link" href="servizi-video.html" data-i18n="nav.svcVideo">Video</a>
+      <a class="mm-link mm-all" href="studio.html#team" data-i18n="nav.allServices">Tutti i servizi</a>
+    </div>
   </div>
-  <a href="studio.html" data-i18n="nav.studio">Lo Studio</a>
-  <a href="lavori.html" data-i18n="nav.work">Lavori</a>
-  <a href="blog.html" data-i18n="nav.blog">Blog</a>
-  <a href="collabora.html" data-i18n="nav.cta">Lavora con noi</a>
-  <div class="m-langs">
-    <button data-lang="it" class="is-current">IT</button>
-    <button data-lang="en">EN</button>
-    <button data-lang="fr">FR</button>
-    <button data-lang="de">DE</button>
+  <div class="mm-footer">
+    <a href="collabora.html" class="pill" data-i18n="nav.cta">Lavora con noi</a>
+    <div class="m-langs">
+      <button data-lang="it" class="is-current">IT</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="de">DE</button>
+    </div>
   </div>
 </nav>
 
