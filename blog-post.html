@@ -6,7 +6,7 @@
 <!-- This is Squarespace. --><!-- polygon-leopard-s82a -->
 <base href=""/>
 <meta charset="utf-8"/>
-<title>Blog | Chloe Leonard Studio</title>
+<title>How to Choose Brand Fonts That Communicate the Right Message | Chloe Leonard Studio</title>
 <meta content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" http-equiv="Accept-CH"/><link href="assets/favicon_e91da9fe.ico" rel="icon" type="image/x-icon"/>
 <meta content="Chloe Leonard Studio" property="og:site_name"/>
 <meta content="Blog | Chloe Leonard Studio" property="og:title"/>
@@ -606,6 +606,60 @@ hr,
   opacity: .45 !important;
   height: 1px !important;
   border: 0 !important;
+}
+</style>
+
+<style id="sr-post-hero-style">
+/* ===== Blog post hero banner (Cowork) =============================================
+   The original post hero is built at runtime by the BlogPostBannerFree plugin
+   (a remote script, removed in this offline mirror). We recreate the same look:
+   a full-bleed featured image with the title + meta overlaid in white, exactly
+   like chloeleonard.com. The inline (dark-on-cream) title/meta are hidden so the
+   post starts straight into the body underneath the banner. ----------------------- */
+section[data-sqsp-section="blog-item"] { padding-top: 0 !important; }
+section[data-sqsp-section="blog-item"] .blog-item-top-wrapper { display: none !important; }
+.sr-post-hero {
+  position: relative;
+  width: 100vw; margin-left: calc(50% - 50vw);
+  height: min(84vh, 780px); min-height: 440px;
+  display: flex; align-items: flex-end;
+  overflow: hidden; margin-bottom: 64px;
+}
+.sr-post-hero__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  opacity: 1 !important; transform: none !important;
+}
+.sr-post-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(35,26,26,.22) 0%, rgba(35,26,26,.10) 42%, rgba(35,26,26,.58) 100%);
+}
+.sr-post-hero__inner {
+  position: relative; z-index: 2;
+  width: 100%; max-width: none;
+  margin: 0; padding: 0 4vw 5vh;
+}
+.sr-post-hero__title {
+  font-family: 'PP Writer', 'adobe-garamond-pro', serif !important;
+  font-weight: 400 !important; font-style: normal;
+  color: #fff !important; -webkit-text-fill-color: #fff;
+  /* Match the original: the whole title sits on a SINGLE line spanning the width.
+     vw-based sizing + nowrap keeps the line scaling with the viewport so it never wraps. */
+  font-size: 3.35vw; line-height: 1.08;
+  letter-spacing: -.01em; white-space: nowrap;
+  margin: 0 0 20px; max-width: none;
+}
+.sr-post-hero__meta {
+  font-family: 'Whyte Medium', 'Whyte Book', sans-serif;
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: #fff !important; -webkit-text-fill-color: #fff; opacity: .92;
+}
+@media (max-width: 767px) {
+  .sr-post-hero { height: 64vh; min-height: 360px; margin-bottom: 40px; }
+  .sr-post-hero__inner { padding: 0 8vw 9vh; }
+  .sr-post-hero__title { font-size: clamp(2rem, 8vw, 3rem); white-space: normal; }
 }
 </style>
 
@@ -1516,271 +1570,184 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
 </div>
 </div>
 </header>
-<main class="container" id="page" role="main">
-<article class="sections" data-page-sections="6877c2a916694401ad2dcefc" id="sections">
-<section class="page-section has-section-divider full-bleed-section layout-engine-section background-width--full-bleed section-height--custom content-width--wide horizontal-alignment--center vertical-alignment--middle light" data-animation="none" data-controller="SectionWrapperController" data-current-context='{
-                                                                                                                                                                                                                                                                                                                                "video": {
-                                                                                                                                                                                                                                                                                                                                  "playbackSpeed": 1,
-                                                                                                                                                                                                                                                                                                                                  "filter": 1,
-                                                                                                                                                                                                                                                                                                                                  "filterStrength": 0,
-                                                                                                                                                                                                                                                                                                                                  "zoom": 0,
-                                                                                                                                                                                                                                                                                                                                  "videoSourceProvider": "none"
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "backgroundImageId": null,
-                                                                                                                                                                                                                                                                                                                                "backgroundMediaEffect": {
-                                                                                                                                                                                                                                                                                                                                  "type": "none"
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "divider": {
-                                                                                                                                                                                                                                                                                                                                  "enabled": true,
-                                                                                                                                                                                                                                                                                                                                  "type": "none",
-                                                                                                                                                                                                                                                                                                                                  "width": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "vw",
-                                                                                                                                                                                                                                                                                                                                    "value": 100.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "height": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "vw",
-                                                                                                                                                                                                                                                                                                                                    "value": 6.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "isFlipX": false,
-                                                                                                                                                                                                                                                                                                                                  "isFlipY": false,
-                                                                                                                                                                                                                                                                                                                                  "offset": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "px",
-                                                                                                                                                                                                                                                                                                                                    "value": 0.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "stroke": {
-                                                                                                                                                                                                                                                                                                                                    "style": "solid",
-                                                                                                                                                                                                                                                                                                                                    "color": {
-                                                                                                                                                                                                                                                                                                                                      "type": "THEME_COLOR"
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "thickness": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 1.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "dashLength": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 5.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "gapLength": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 15.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "linecap": "square"
-                                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "typeName": "blog-basic-grid"
-                                                                                                                                                                                                                                                                                                                              }' data-current-styles='{
-                                                                                                                                                                                                                                                                                                                                "imageOverlayOpacity": 0.15,
-                                                                                                                                                                                                                                                                                                                                "backgroundWidth": "background-width--full-bleed",
-                                                                                                                                                                                                                                                                                                                                "sectionHeight": "section-height--custom",
-                                                                                                                                                                                                                                                                                                                                "customSectionHeight": 0,
-                                                                                                                                                                                                                                                                                                                                "horizontalAlignment": "horizontal-alignment--center",
-                                                                                                                                                                                                                                                                                                                                "verticalAlignment": "vertical-alignment--middle",
-                                                                                                                                                                                                                                                                                                                                "contentWidth": "content-width--wide",
-                                                                                                                                                                                                                                                                                                                                "customContentWidth": 50,
-                                                                                                                                                                                                                                                                                                                                "sectionTheme": "light",
-                                                                                                                                                                                                                                                                                                                                "sectionAnimation": "none",
-                                                                                                                                                                                                                                                                                                                                "backgroundMode": "image"
-                                                                                                                                                                                                                                                                                                                              }' data-fluid-engine-section="" data-section-id="696a78dd15d1800b0e951e37" data-section-theme="light" data-sqsp-section="fluid-engine" data-test="page-section">
-<div class="section-border" data-controller="SectionDivider" style="clip-path: none;">
-<div class="section-background">
-</div>
-</div>
-<div class="content-wrapper" style="
-      
+<main id="page" class="container" role="main">
         
           
-          padding-top: calc(0vmax / 10); padding-bottom: calc(0vmax / 10);
-        
-      
-    ">
-<div class="content">
-<div data-fluid-engine="true"><style>
-
-.fe-696a78dd7d461842c95d1edf {
-  --grid-gutter: calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px);
-  --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 );
-
-  display: grid;
-  position: relative;
-  grid-area: 1/1/-1/-1;
-  grid-template-rows: repeat(15,minmax(24px, auto));
-  grid-template-columns:
-    minmax(var(--grid-gutter), 1fr)
-    repeat(8, minmax(0, var(--cell-max-width)))
-    minmax(var(--grid-gutter), 1fr);
-  row-gap: 11.0px;
-  column-gap: 11.0px;
-  overflow-x: hidden;
-  overflow-x: clip;
-}
-
-@media (min-width: 768px) {
-  .background-width--inset .fe-696a78dd7d461842c95d1edf {
-    --inset-padding: calc(var(--sqs-site-gutter) * 2);
-  }
-
-  .fe-696a78dd7d461842c95d1edf {
-    --grid-gutter: calc(var(--sqs-site-gutter, 4vw) - 11.0px);
-    --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (24 - 1)) ) / 24 );
-    --inset-padding: 0vw;
-
-    --row-height-scaling-factor: 0.0215;
-    --container-width: min(var(--sqs-site-max-width, 1500px), calc(100vw - var(--sqs-site-gutter, 4vw) * 2 - var(--inset-padding) ));
-
-    grid-template-rows: repeat(9,minmax(calc(var(--container-width) * var(--row-height-scaling-factor)), auto));
-    grid-template-columns:
-      minmax(var(--grid-gutter), 1fr)
-      repeat(24, minmax(0, var(--cell-max-width)))
-      minmax(var(--grid-gutter), 1fr);
-  }
-}
-
-
-  .fe-block-yui_3_17_2_1_1768866178939_4550 {
-    grid-area: 3/2/8/10;
-    z-index: 1;
-
-    @media (max-width: 767px) {
-      
-        
-      
-      
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_4550 .sqs-block {
-    justify-content: flex-start;
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_4550 .sqs-block-alignment-wrapper {
-    align-items: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1768866178939_4550 {
-      grid-area: 2/2/6/21;
-      z-index: 1;
-
-      
-        
-      
-
-      
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_4550 .sqs-block {
-      justify-content: flex-start;
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_4550 .sqs-block-alignment-wrapper {
-      align-items: flex-start;
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5033 {
-    grid-area: 8/2/12/10;
-    z-index: 2;
-
-    @media (max-width: 767px) {
-      
-        
-      
-      
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5033 .sqs-block {
-    justify-content: flex-start;
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5033 .sqs-block-alignment-wrapper {
-    align-items: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1768866178939_5033 {
-      grid-area: 7/2/9/14;
-      z-index: 2;
-
-      
-        
-      
-
-      
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_5033 .sqs-block {
-      justify-content: flex-start;
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_5033 .sqs-block-alignment-wrapper {
-      align-items: flex-start;
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5612 {
-    grid-area: 13/2/15/10;
-    z-index: 3;
-
-    @media (max-width: 767px) {
-      
-        
-      
-      
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5612 .sqs-block {
-    justify-content: flex-start;
-  }
-
-  .fe-block-yui_3_17_2_1_1768866178939_5612 .sqs-block-alignment-wrapper {
-    align-items: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1768866178939_5612 {
-      grid-area: 3/21/5/27;
-      z-index: 3;
-
-      
-        
-      
-
-      
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_5612 .sqs-block {
-      justify-content: flex-start;
-    }
-
-    .fe-block-yui_3_17_2_1_1768866178939_5612 .sqs-block-alignment-wrapper {
-      align-items: flex-start;
-    }
-  }
-
-</style><div class="fluid-engine fe-696a78dd7d461842c95d1edf"><div class="fe-block fe-block-yui_3_17_2_1_1768866178939_4550"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css"]' data-block-scripts='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js"]' data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1768866178939_4550" id="block-yui_3_17_2_1_1768866178939_4550"><div class="sqs-block-content"><div class="sqs-text-block-container">
-<div class="sqs-html-content" data-sqsp-text-block-content=""><h1 style="white-space:pre-wrap;">Notes From The Studio</h1></div>
-<style id="container-styles">#block-yui_3_17_2_1_1768866178939_4550 {
+            
+<article class="sections" id="sections" data-page-sections="6877c2a916694401ad2dcefc">
+  
+  
     
-    --stroke-style: none;--stroke-thickness: 6px;
-    
-      
-      
-      
     
 
---tweak-text-block-background-color: initial;
 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<section
+  data-test="page-section"
+  
+  data-section-theme="light"
+  class='page-section 
+    
+      content-collection
+      full-bleed-section
+      collection-type-blog-basic-grid
+    
+    background-width--full-bleed
+    
+      section-height--medium
+    
+    
+      content-width--wide
+    
+    horizontal-alignment--center
+    vertical-alignment--middle
+    
+      
+    
+    
+    light'
+  
+  data-section-id="6877c2a916694401ad2dcefe"
+  
+  data-controller="SectionWrapperController"
+  data-current-styles="{
+                                                                                                                                                                                                                                                                    &quot;imageOverlayOpacity&quot;: 0.15,
+                                                                                                                                                                                                                                                                    &quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
+                                                                                                                                                                                                                                                                    &quot;sectionHeight&quot;: &quot;section-height--medium&quot;,
+                                                                                                                                                                                                                                                                    &quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
+                                                                                                                                                                                                                                                                    &quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
+                                                                                                                                                                                                                                                                    &quot;contentWidth&quot;: &quot;content-width--wide&quot;,
+                                                                                                                                                                                                                                                                    &quot;sectionTheme&quot;: &quot;light&quot;,
+                                                                                                                                                                                                                                                                    &quot;sectionAnimation&quot;: &quot;none&quot;,
+                                                                                                                                                                                                                                                                    &quot;backgroundMode&quot;: &quot;image&quot;
+                                                                                                                                                                                                                                                                  }"
+  data-current-context="{
+                                                                                                                                                                                                                                                                    &quot;video&quot;: {
+                                                                                                                                                                                                                                                                      &quot;playbackSpeed&quot;: 0.5,
+                                                                                                                                                                                                                                                                      &quot;filter&quot;: 1,
+                                                                                                                                                                                                                                                                      &quot;filterStrength&quot;: 0,
+                                                                                                                                                                                                                                                                      &quot;zoom&quot;: 0,
+                                                                                                                                                                                                                                                                      &quot;videoSourceProvider&quot;: &quot;none&quot;
+                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                    &quot;backgroundImageId&quot;: null,
+                                                                                                                                                                                                                                                                    &quot;backgroundMediaEffect&quot;: null,
+                                                                                                                                                                                                                                                                    &quot;divider&quot;: null,
+                                                                                                                                                                                                                                                                    &quot;typeName&quot;: &quot;blog-basic-grid&quot;
+                                                                                                                                                                                                                                                                  }"
+  data-animation="none"
+  
+   
+  
+  
+  
+  
+  
+
+
+  
+    data-sqsp-section="blog-item"
+  
+
+
+>
+  <div
+    class="section-border"
+    
+  >
+    <div class="section-background">
+    
+      
+    
+    </div>
+  </div>
+  <div
+    class='content-wrapper'
+    style='
+      
+      
+    '
+  >
+    <div
+      class="content"
+      
+    >
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="sr-post-hero" data-no-animation="">
+        <img class="sr-post-hero__img" src="assets/_placeholder.svg" alt="How to Choose Brand Fonts That Communicate the Right Message"/>
+        <div class="sr-post-hero__overlay"></div>
+        <div class="sr-post-hero__inner">
+          <h1 class="sr-post-hero__title">How to Choose Brand Fonts That Communicate the Right Message</h1>
+          <div class="sr-post-hero__meta">Branding&nbsp;&nbsp;&nbsp;Jun 11</div>
+        </div>
+      </div>
+      <div class="blog-item-wrapper blog-basic-grid-item-wrapper" data-content-field="main-content" data-item-id="">
+  <article id="article-" class="h-entry entry hentry post-type-">
+  
+    
+    
+    
+    <div class="blog-item-inner-wrapper">
+      <div class="blog-item-top-wrapper">
+        <div class="blog-item-title">
+          <h1 class="entry-title entry-title--large p-name" itemprop="headline" data-content-field="title">How to Choose Brand Fonts That Communicate the Right Message</h1>
+        </div>
+        <div class="blog-item-meta-wrapper">
+          
+            <div class="blog-meta-item blog-meta-item--categories" data-content-field="categories">
+              <span class="blog-item-category-wrapper"><a href="category/Branding.html" class="blog-item-category blog-item-category--Branding">Branding</a></span>
+            </div>
+          
+
+          <div class="blog-item-author-date-wrapper" data-animation-role="date">
+            <time class="dt-published blog-meta-item blog-meta-item--date" datetime="Jun 11" pubdate data-content-field="published-on">
+              <span>Jun 11</span>
+            </time>
+            <div class="blog-meta-item blog-meta-item--author p-author author" data-content-field="author">Written By <a href="#" class="blog-author-name">Chloe Leonard</a></div>
+          </div>
+          
+        </div>
+      </div>
+
+      
+        <div class="blog-item-content-wrapper">
+          <div class="blog-item-content e-content"><div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" id="item-6a298a486d0f2e21a8ed82d8"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="ab19a04089a7539e8f7b" id="block-ab19a04089a7539e8f7b"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><p style="white-space:pre-wrap;" class="sqsrte-large" data-rte-preserve-empty="true">By <a href="#">Chloe Leonard</a>, Founder of CL Studio</p><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Most business owners spend hours agonizing over their logo and color palette, then pick a font because it "looks nice." The result is a brand identity that almost works , but something feels slightly off, and nobody can say why.</p><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Typography is doing a lot of quiet work in your brand. The fonts you choose communicate personality, price point, and positioning before anyone reads a single word. When font choices align with the rest of your identity, everything coheres. When they don't, the whole thing feels just slightly wrong.</p><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Here's how to approach brand typography strategically.</p><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">Why Brand Fonts Matter More Than You Think</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Typography influences how your audience perceives your brand at a gut level. A serif font can feel editorial and established. A sans-serif can feel modern and clean. A script can feel personal and warm , or overdone and dated, depending on execution.</p><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Your fonts appear everywhere: your website, your email marketing, your proposals, your social media graphics. Unlike color, which can be felt in a glance, typography shapes the experience of actually reading and engaging with your content. That's a significant amount of brand real estate.</p></div>
+
+
+  
+<style id="container-styles">#block-ab19a04089a7539e8f7b {
+    
+    
+    
   }
 
-  #block-yui_3_17_2_1_1768866178939_4550 .sqs-html-content {
+  #block-ab19a04089a7539e8f7b .sqs-html-content {
     
-    --tweak-text-block-padding: 6% 6% 6% 6%;
-  --tweak-text-block-padding: initial;
-}
+    }
 
-  .fe-block-yui_3_17_2_1_1768866178939_4550 {
+  #block-ab19a04089a7539e8f7b {
       mix-blend-mode: var(--tweak-text-block-blend
   );
       border-radius: var(--tweak-text-block-radius);
@@ -1788,35 +1755,28 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
 
   
   
-.fe-block-yui_3_17_2_1_1768866178939_4550 {
-      --tweak-text-block-radius: 0px 0px 0px 0px;
-    }
+
 
 
   
-  .fe-block-yui_3_17_2_1_1768866178939_4550 {
-      --tweak-text-block-blend
-  : normal;
-    }
   
 
-  .fe-block-yui_3_17_2_1_1768866178939_4550 {
-    --blur-value: blur(15px);}
-
+  
 </style>
+
 <style id="override-container-styles">
     @media screen and (max-width: 767px) {
           
             
 
-#block-yui_3_17_2_1_1768866178939_4550 {
+#block-ab19a04089a7539e8f7b {
             
             }
         }
     
   
     @media screen and (max-width: 767px) {
-          #block-yui_3_17_2_1_1768866178939_4550 .sqs-html-content {
+          #block-ab19a04089a7539e8f7b .sqs-html-content {
             
             }
         }
@@ -1829,31 +1789,178 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
           
           
         }</style>
+
 <style class="transform-overrides-vars">
-</style>
+    
+  </style>
+
+
+
 </div>
-</div></div></div><div class="fe-block fe-block-yui_3_17_2_1_1768866178939_5033"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css"]' data-block-scripts='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js"]' data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1768866178939_5033" id="block-yui_3_17_2_1_1768866178939_5033"><div class="sqs-block-content"><div class="sqs-text-block-container">
-<div class="sqs-html-content" data-sqsp-text-block-content=""><h2 style="white-space:pre-wrap;">Clear thinking on branding, web design, and marketing for businesses ready to grow, transform, and own the room.</h2></div>
-<style id="container-styles">#block-yui_3_17_2_1_1768866178939_5033 {
+</div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_25336"><div class="sqs-block-content"><hr /></div></div><div class="row sqs-row"><div class="col sqs-col-5 span-5"><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="67.12962962962963" data-block-type="5" data-sqsp-block="image-classic" id="block-yui_3_17_2_1_1781107272815_29512"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
     
-    --stroke-style: none;--stroke-thickness: 6px;
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-site-default
+          individual-animation-site-default
+          individual-text-animation-site-default
+        "
+        data-test="image-block-inline-outer-wrapper"
+        data-sqsp-image-classic-block-layout="inline"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1500px;"
+        >
+          
+        
+        
+
+        
+          <a
+              data-sqsp-image-classic-block-image-link
+              class="
+                sqs-block-image-link
+                
+          
+        
+              "
+              href="https://clstudio.myflodesk.com/brandaudit"
+              target="_blank"
+          >
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div data-sqsp-image-classic-block-image-container class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:67.12963104248047%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="assets/_placeholder.svg" data-image="assets/_placeholder.svg" data-image-dimensions="1500x1553" data-image-focal-point="0.5,0.5" alt="" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="assets/_placeholder.svg" width="1500" height="1553" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 41.66666666666667vw, 41.66666666666667vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          </a>
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div><div class="col sqs-col-7 span-7"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_27581" id="block-yui_3_17_2_1_1781107272815_27581"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="text-align: start; ; white-space:pre-wrap;" data-rte-preserve-empty="true">Download Our Free Brand Audit Guide</h2><p class="preFade fadeIn" style="text-align: start; ; white-space:pre-wrap;" data-rte-preserve-empty="true">Feel like your brand is missing the mark? Not sure where to start. As a creative agency for almost a decade, we know where a brand needs a little TLC.<strong> That’s why we created the free brand audit guide</strong> so you can take your brand consistency, alignment, and look into your own hands.</p></div>
+
+
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_27581 {
     
+    --stroke-style: none;--stroke-thickness: 2px;
+    
+      --tweak-text-block-stroke-color: hsla(var(--black-hsl), 1)
+;
       
       
       
     
 
---tweak-text-block-background-color: initial;
+
 
   }
 
-  #block-yui_3_17_2_1_1768866178939_5033 .sqs-html-content {
+  #block-yui_3_17_2_1_1781107272815_27581 .sqs-html-content {
     
     --tweak-text-block-padding: 6% 6% 6% 6%;
   --tweak-text-block-padding: initial;
 }
 
-  .fe-block-yui_3_17_2_1_1768866178939_5033 {
+  #block-yui_3_17_2_1_1781107272815_27581 {
       mix-blend-mode: var(--tweak-text-block-blend
   );
       border-radius: var(--tweak-text-block-radius);
@@ -1861,35 +1968,36 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
 
   
   
-.fe-block-yui_3_17_2_1_1768866178939_5033 {
+#block-yui_3_17_2_1_1781107272815_27581 {
       --tweak-text-block-radius: 0px 0px 0px 0px;
     }
 
 
   
-  .fe-block-yui_3_17_2_1_1768866178939_5033 {
+  #block-yui_3_17_2_1_1781107272815_27581 {
       --tweak-text-block-blend
   : normal;
     }
   
 
-  .fe-block-yui_3_17_2_1_1768866178939_5033 {
+  #block-yui_3_17_2_1_1781107272815_27581 {
     --blur-value: blur(15px);}
 
 </style>
+
 <style id="override-container-styles">
     @media screen and (max-width: 767px) {
           
             
 
-#block-yui_3_17_2_1_1768866178939_5033 {
+#block-yui_3_17_2_1_1781107272815_27581 {
             
             }
         }
     
   
     @media screen and (max-width: 767px) {
-          #block-yui_3_17_2_1_1768866178939_5033 .sqs-html-content {
+          #block-yui_3_17_2_1_1781107272815_27581 .sqs-html-content {
             
             }
         }
@@ -1902,1149 +2010,153 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
           
           
         }</style>
+
+<style class="transform-vars">
+    #block-yui_3_17_2_1_1781107272815_27581 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+
+      opacity: var(--opacity, 1);
+      transform: translateX(var(--translate-x)) translateY(var(--translate-y)) rotate(var(--rotation)) scale(var(--scale-x), var(--scale-y)) skewX(var(--skew-x)) skewY(var(--skew-y));
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style>
 <style class="transform-overrides-vars">
-</style>
+    
+  </style>
+
+
+
 </div>
-</div></div></div><div class="fe-block fe-block-yui_3_17_2_1_1768866178939_5612"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-archive" data-block-css='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.archive/9849c827-7bda-4252-8be1-14a8151fd0ac_336/website.components.archive.styles.css"]' data-block-scripts='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.archive/9849c827-7bda-4252-8be1-14a8151fd0ac_336/website.components.archive.visitor.js"]' data-block-type="1337" data-definition-name="website.components.archive" data-sqsp-block="archive" data-website-component-id="yui_3_17_2_1_1768866178939_5612" id="block-yui_3_17_2_1_1768866178939_5612"><div class="sqs-block-content">
-<details class="archive-block-wrapper archive-block-setting-layout-dropdown archive-block-setting-text-alignment-left archive-block-setting-multicolumns">
-<summary class="archive-dropdown-toggle-label">
-<span class="archive-dropdown-toggle-title">CATEGORIES</span>
-<span aria-hidden="true" class="archive-dropdown-toggle-icon"></span>
-</summary>
-<ul class="archive-group-list">
-<li class="archive-group">
-<a class="archive-group-name-link" href="#">
-          
+</div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-button button-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/a605d57f-b01c-4fda-a71f-d6ffcc17f149_835/website.components.button.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/a605d57f-b01c-4fda-a71f-d6ffcc17f149_835/website.components.button.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.button" data-sqsp-block="button" data-website-component-id="yui_3_17_2_1_1781107272815_38548" id="block-yui_3_17_2_1_1781107272815_38548"><div class="sqs-block-content">
 
-            
 
-            
 
-            
+  
+    
+    
+      
+      
 
-            Branding
-            
 
-            
-          </a>
-</li>
-<li class="archive-group">
-<a class="archive-group-name-link" href="#">
-          
 
-            
+<div
+  class="sqs-block-button-container sqs-button-block-container-system_desktop sqs-block-button-container--center "
+  data-animation-role="button"
+  data-button-size="medium"
+  data-button-type="primary"
+  
+>
+  <a
+    href="https://clstudio.myflodesk.com/brandaudit"
+    class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
+    data-sqsp-button
+    target="_blank"
+  >
+    DOWNLOAD THE FREE GUIDE
+  </a>
+  
 
-            
 
-            
 
-            Email Marketing
-            
-
-            
-          </a>
-</li>
-<li class="archive-group">
-<a class="archive-group-name-link" href="#">
-          
-
-            
-
-            
-
-            
-
-            Web Design
-            
-
-            
-          </a>
-</li>
-</ul>
-</details>
-</div></div></div></div></div>
 </div>
-</div>
-<div class="section-divider-display" style="
-    --stroke-thickness: 1px;
-    --stroke-dasharray: 0;
-    --stroke-linecap: square;
+
+    
+  
+    
     
       
     
-  ">
+  
+
+
 <style>
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"] {
-      padding-bottom: var(--divider-height);
-      z-index: var(--z-index);
-    }
+  #block-yui_3_17_2_1_1781107272815_38548 {
+    --sqs-block-content-flex: 0;
+  }
 
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"] .background-pause-button {
-      bottom: calc(14px + var(--divider-height));
-    }
+  
+  
+    
+      
+      
+    
+      
+      
+        
+      
+    
+  
+</style>
+<style class="transform-vars">
+    #block-yui_3_17_2_1_1781107272815_38548 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
 
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"] .section-divider-svg-clip {
-      display: none;
-    }
-
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
-      padding-bottom: calc(var(--sqs-site-gutter) + var(--divider-height));
-    }
-
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) .section-background {
-      bottom: calc(var(--sqs-site-gutter) + var(--divider-height));
-    }
-
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"] .section-divider-block {
-      height: var(--divider-height);
+      opacity: var(--opacity, 1);
+      transform: translateX(var(--translate-x)) translateY(var(--translate-y)) rotate(var(--rotation)) scale(var(--scale-x), var(--scale-y)) skewX(var(--skew-x)) skewY(var(--skew-y));
+      transform-origin: var(--origin-x) var(--origin-y);
     }
   </style>
-<style data-section-divider-style="">
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"] {
-      padding-bottom: 6vw;
-    }
-    .has-section-divider[data-section-id="696a78dd15d1800b0e951e37"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
-      padding-bottom: calc(var(--sqs-site-gutter) + 6vw);
-    }
+<style class="transform-overrides-vars">
+    
   </style>
-<div class="section-divider-block"></div>
-<svg class="section-divider-svg-clip">
-<clippath clippathunits="objectBoundingBox" id="section-divider-696a78dd15d1800b0e951e37">
-<path class="section-divider-clip" d="M0,0"></path>
-</clippath>
-</svg>
-<svg class="section-divider-svg-stroke" preserveaspectratio="none" viewbox="0 0 1 1">
-<path class="section-divider-stroke" d="M-100,0.5 L-100,1.5 M0,1 L1,1" vector-effect="non-scaling-stroke"></path>
-</svg>
-</div>
-</section>
-<section class="page-section content-collection full-bleed-section collection-type-blog-basic-grid background-width--full-bleed section-height--medium content-width--wide horizontal-alignment--center vertical-alignment--middle light" data-animation="none" data-controller="SectionWrapperController" data-current-context='{
-                                                                                                                                                                                                                                                                                                                                "video": {
-                                                                                                                                                                                                                                                                                                                                  "playbackSpeed": 0.5,
-                                                                                                                                                                                                                                                                                                                                  "filter": 1,
-                                                                                                                                                                                                                                                                                                                                  "filterStrength": 0,
-                                                                                                                                                                                                                                                                                                                                  "zoom": 0,
-                                                                                                                                                                                                                                                                                                                                  "videoSourceProvider": "none"
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "backgroundImageId": null,
-                                                                                                                                                                                                                                                                                                                                "backgroundMediaEffect": null,
-                                                                                                                                                                                                                                                                                                                                "divider": null,
-                                                                                                                                                                                                                                                                                                                                "typeName": "blog-basic-grid"
-                                                                                                                                                                                                                                                                                                                              }' data-current-styles='{
-                                                                                                                                                                                                                                                                                                                                "imageOverlayOpacity": 0.15,
-                                                                                                                                                                                                                                                                                                                                "backgroundWidth": "background-width--full-bleed",
-                                                                                                                                                                                                                                                                                                                                "sectionHeight": "section-height--medium",
-                                                                                                                                                                                                                                                                                                                                "horizontalAlignment": "horizontal-alignment--center",
-                                                                                                                                                                                                                                                                                                                                "verticalAlignment": "vertical-alignment--middle",
-                                                                                                                                                                                                                                                                                                                                "contentWidth": "content-width--wide",
-                                                                                                                                                                                                                                                                                                                                "sectionTheme": "light",
-                                                                                                                                                                                                                                                                                                                                "sectionAnimation": "none",
-                                                                                                                                                                                                                                                                                                                                "backgroundMode": "image"
-                                                                                                                                                                                                                                                                                                                              }' data-section-id="6877c2a916694401ad2dcefe" data-section-theme="light" data-sqsp-section="blog-list" data-test="page-section">
-<div class="section-border">
-<div class="section-background">
-</div>
-</div>
-<div class="content-wrapper" style="
-      
-      
-    ">
-<div class="content">
-<div class="blog-basic-grid collection-content-wrapper" data-controller="BlogImageLoader">
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How to Choose Brand Fonts That Communicate the Right Message" class="image" data-image-dimensions="4000x2667" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="2667" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="4000"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/11/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/11/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
+</div></div></div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_26809"><div class="sqs-block-content"><hr /></div></div><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-embed embed-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/42598a67-7d03-45c5-8592-fdc7f98f9b3d_410/website.components.embed.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.embed/42598a67-7d03-45c5-8592-fdc7f98f9b3d_410/website.components.embed.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.embed" data-sqsp-block="embed" data-website-component-id="yui_3_17_2_1_1781107272815_48255" id="block-yui_3_17_2_1_1781107272815_48255"><div class="sqs-block-content"><div
+  class="sqs-embed-container"
+  data-localized="{&quot;embedInvalid&quot;:&quot;Enter a valid embed URL or code.&quot;,&quot;embedTitle&quot;:&quot;Embed Block&quot;,&quot;embedUninitialized&quot;:&quot;Add an embed URL or code.&quot;,&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;invalidThumbnail&quot;:&quot;Custom featured images only available with embedded videos. Go back into embed settings to turn off featured images.&quot;,&quot;invalidVideo&quot;:&quot;Invalid video embed.&quot;,&quot;playButton&quot;:&quot;Play&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}"
   
-    How to Choose Brand Fonts That Communicate the Right Message
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Your brand typography is just as strategic as your colors. Here's how to choose brand fonts that reflect your personality, attract the right clients, and create a cohesive identity.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Klaviyo vs. Flodesk vs. Mailchimp: Which Email Platform Is Right for Your Business?" class="image" data-image-dimensions="2000x1500" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1500" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="2000"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/10/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/10/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
+>
   
-    Klaviyo vs. Flodesk vs. Mailchimp: Which Email Platform Is Right for Your Business?
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Choosing between Klaviyo, Flodesk, and Mailchimp? Here's an honest comparison from a designer who works with all three , and how to pick the right one for your business.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="What to Send in Your Email Newsletter When You Have No Idea What to Write" class="image" data-image-dimensions="1024x683" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="683" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1024"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/3/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/3/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
   
-    What to Send in Your Email Newsletter When You Have No Idea What to Write
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Staring at a blank email and not sure what to send your list? Here are practical, ready-to-use newsletter ideas for small business owners who want to show up consistently without the stress.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Email Marketing for Service-Based Businesses: What to Send and When" class="image" data-image-dimensions="2359x1350" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1350" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="2359"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/1/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">6/1/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Email Marketing for Service-Based Businesses: What to Send and When
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Not sure what to send your email list as a service provider? Here is exactly what to email your subscribers and when to send it to build trust and book more clients.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Abandoned Cart Email Strategy That Brings Customers Back" class="image" data-image-dimensions="1667x833" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="833" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1667"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/30/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/30/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Abandoned Cart Email Strategy That Brings Customers Back
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Learn how to set up abandoned cart email flows that recover lost sales, increase ROI, and create a better customer experience for your e-commerce brand.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How to Grow Your Email List Fast Without Paid Ads" class="image" data-image-dimensions="1024x1280" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1280" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1024"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/29/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/29/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    How to Grow Your Email List Fast Without Paid Ads
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Proven, no-fluff methods to build your email list quickly, even with a small following and zero ad spend. Start growing a list that actually converts.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How to Write an About Page That Connects and Converts" class="image" data-image-dimensions="2500x1667" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1667" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="2500"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/28/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/28/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    How to Write an About Page That Connects and Converts
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Go beyond bios and write an about page that builds trust, communicates your value clearly, and connects emotionally with the clients you actually want to work with.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How To Stand Out As a Nashville Small Business in 2026" class="image" data-image-dimensions="4189x5236" data-image-focal-point="0.4777073766203569,0.6458633679021533" data-loader="sqs" decoding="async" height="5236" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 47.77073766203569% 64.58633679021533%;" width="4189"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a><span class="blog-categories--comma">, </span>
-<a class="blog-categories" href="#">Branding</a><span class="blog-categories--comma">, </span>
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/27/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Email Marketing</a><span class="blog-categories--comma">, </span>
-<a class="blog-categories" href="#">Branding</a><span class="blog-categories--comma">, </span>
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/27/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    How To Stand Out As a Nashville Small Business in 2026
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Nashville's business landscape is more competitive than ever. Here are four practical tips to help your Nashville small business stand out, get found, and grow for the long run.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How to Name Your Med Spa: What Your Name Is Already Telling Clients" class="image" data-image-dimensions="1085x700" data-image-focal-point="0.5730765764412533,0.5178812258754593" data-loader="sqs" decoding="async" height="700" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 57.30765764412533% 51.78812258754593%;" width="1085"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/26/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/26/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    How to Name Your Med Spa: What Your Name Is Already Telling Clients
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Your med spa's name signals price point, trust level, and positioning before a client ever books. Here's how to choose a name that actually works, and what to do if yours isn't.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="What Your Interior Design Website Tells Luxury Clients" class="image" data-image-dimensions="3623x5434" data-image-focal-point="0.45535714285714285,0.7440476190476191" data-loader="sqs" decoding="async" height="5434" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 45.535714285714285% 74.40476190476191%;" width="3623"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/25/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/25/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    What Your Interior Design Website Tells Luxury Clients
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">You might have a beautiful portfolio and still be losing luxury clients before they ever contact you. Here's what your website is communicating, and how to fix it.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="What Your Skincare Website Needs to Actually Convert" class="image" data-image-dimensions="3072x4608" data-image-focal-point="0.5714285714285714,0.6726190476190477" data-loader="sqs" decoding="async" height="4608" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 57.14285714285714% 67.26190476190477%;" width="3072"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/23/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/23/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    What Your Skincare Website Needs to Actually Convert
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">A pretty skincare website is not always an effective one. Here's what your site needs to turn visitors into customers.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="When Is It Time to Rebrand Your Med Spa? (4 Signs to Watch For)" class="image" data-image-dimensions="1080x1350" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1350" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1080"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/22/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/22/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    When Is It Time to Rebrand Your Med Spa? (4 Signs to Watch For)
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Not sure if your med spa needs a rebrand or just a refresh? Here are four honest signs it's time — plus what the process actually looks like.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Why Your Logo Is Not Your Brand" class="image" data-image-dimensions="1620x2025" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="2025" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1620"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/21/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/21/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Why Your Logo Is Not Your Brand
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Most business owners think branding is a logo. It is not. Here is what a brand actually is, what it does, and why the distinction matters for your business.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Wellness Branding in Nashville: What It Takes to Build Trust and Attract the Right Clients" class="image" data-image-dimensions="5184x3456" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="3456" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="5184"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/20/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/20/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Wellness Branding in Nashville: What It Takes to Build Trust and Attract the Right Clients
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Nashville's wellness sector is growing fast and getting more competitive. Here's what it takes to build a brand that earns trust, attracts the right clients, and reflects the depth of your work.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="5 Signs Your Brand Is Working Against You" class="image" data-image-dimensions="6720x4480" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="4480" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="6720"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/19/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/19/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    5 Signs Your Brand Is Working Against You
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">If your brand isn't attracting the right clients, the problem might be more visible than you think. Here are five signs your brand is working against you.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Branding for Group Therapy Practices: A Different Kind of Challenge" class="image" data-image-dimensions="6035x3542" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="3542" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="6035"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/18/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/18/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Branding for Group Therapy Practices: A Different Kind of Challenge
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;"><strong> </strong>Group practices have unique branding needs. Here's how to build a brand that unifies a team of practitioners while honoring each individual's approach.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Nashville Creative Agency vs. DIY Branding: An Honest Comparison" class="image" data-image-dimensions="1024x1280" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1280" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1024"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/16/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/16/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Nashville Creative Agency vs. DIY Branding: An Honest Comparison
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Should you hire a Nashville creative agency or DIY your brand? An honest look at the tradeoffs, costs, and what each approach actually delivers.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="How to Choose a Brand Designer Who Specializes in Therapy Practices" class="image" data-image-dimensions="1221x876" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="876" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1221"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/15/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/15/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    How to Choose a Brand Designer Who Specializes in Therapy Practices
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Not every designer understands the nuance of therapy branding. Here's what to look for when choosing a brand designer who truly gets your practice.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="What Makes a Boutique Branding Agency in Nashville Different" class="image" data-image-dimensions="1024x683" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="683" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1024"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/11/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Branding</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/11/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    What Makes a Boutique Branding Agency in Nashville Different
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">Boutique agencies work differently than large firms. Here's what that means for Nashville small businesses and why the size of your agency matters.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<article class="blog-basic-grid--container entry blog-item">
-<div>
-<a class="image-wrapper" data-animation-role="image" href="blog-post.html">
-<img alt="Website Design for Nashville Small Businesses: What You Actually Need" class="image" data-image-dimensions="1691x1781" data-image-focal-point="0.5,0.5" data-loader="sqs" decoding="async" height="1781" loading="lazy" src="assets/_placeholder.svg" style="display:block;position: absolute; height: 100%; width: 100%; object-fit: cover; object-position: 50% 50%;" width="1691"/>
-</a>
-</div>
-<div class="blog-article-spacer"></div>
-<div class="blog-basic-grid--text">
-<div class="blog-meta-section">
-<span class="blog-meta-primary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/9/26</time>
-</span>
-<span class="blog-meta-delimiter"></span>
-<span class="blog-meta-delimiter blog-category-delimiter"></span>
-<span class="blog-meta-secondary">
-<span class="blog-categories-list">
-<a class="blog-categories" href="#">Web Design</a>
-</span>
-<span class="blog-author">Chloe Leonard</span>
-<time class="blog-date" data-animation-role="date" pubdate="">5/9/26</time>
-</span>
-</div>
-<h1 class="blog-title">
-<a data-no-animation="" href="blog-post.html">
-  
-    Website Design for Nashville Small Businesses: What You Actually Need
-  </a>
-</h1>
-<div class="blog-excerpt">
-<div class="blog-excerpt-wrapper"><p data-rte-preserve-empty="true" style="white-space:pre-wrap;">A good website does more than look nice. Here's what Nashville small businesses actually need from their site to attract visitors and convert them into clients.</p></div>
-</div>
-<a class="blog-more-link" data-animation-role="content" href="blog-post.html"></a>
-</div>
-</article>
-<nav class="blog-list-pagination">
-<div class="newer">
-</div>
-<div class="older">
-<a href="#" rel="next">
-<span class="next-label">Older Posts</span>
-<div class="blog-list-pagination-icon icon icon--stroke">
-<svg class="caret-right-icon--small" viewbox="0 0 9 16">
-<polyline fill="none" points="1.6,1.2 6.5,7.9 1.6,14.7 " stroke-miterlimit="10"></polyline>
-</svg>
-</div>
-</a>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</section>
-<section class="page-section has-section-divider full-bleed-section layout-engine-section background-width--full-bleed section-height--small content-width--wide horizontal-alignment--center vertical-alignment--middle light" data-animation="none" data-controller="SectionWrapperController" data-current-context='{
-                                                                                                                                                                                                                                                                                                                                "video": {
-                                                                                                                                                                                                                                                                                                                                  "playbackSpeed": 1,
-                                                                                                                                                                                                                                                                                                                                  "filter": 1,
-                                                                                                                                                                                                                                                                                                                                  "filterStrength": 0,
-                                                                                                                                                                                                                                                                                                                                  "zoom": 0,
-                                                                                                                                                                                                                                                                                                                                  "videoSourceProvider": "none"
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "backgroundImageId": null,
-                                                                                                                                                                                                                                                                                                                                "backgroundMediaEffect": {
-                                                                                                                                                                                                                                                                                                                                  "type": "none"
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "divider": {
-                                                                                                                                                                                                                                                                                                                                  "enabled": true,
-                                                                                                                                                                                                                                                                                                                                  "type": "none",
-                                                                                                                                                                                                                                                                                                                                  "width": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "vw",
-                                                                                                                                                                                                                                                                                                                                    "value": 100.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "height": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "vw",
-                                                                                                                                                                                                                                                                                                                                    "value": 6.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "isFlipX": false,
-                                                                                                                                                                                                                                                                                                                                  "isFlipY": false,
-                                                                                                                                                                                                                                                                                                                                  "offset": {
-                                                                                                                                                                                                                                                                                                                                    "unit": "px",
-                                                                                                                                                                                                                                                                                                                                    "value": 0.0
-                                                                                                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                                                                                                                  "stroke": {
-                                                                                                                                                                                                                                                                                                                                    "style": "solid",
-                                                                                                                                                                                                                                                                                                                                    "color": {
-                                                                                                                                                                                                                                                                                                                                      "type": "THEME_COLOR"
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "thickness": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 1.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "dashLength": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 5.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "gapLength": {
-                                                                                                                                                                                                                                                                                                                                      "unit": "px",
-                                                                                                                                                                                                                                                                                                                                      "value": 15.0
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                    "linecap": "square"
-                                                                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                                                                "typeName": "blog-basic-grid"
-                                                                                                                                                                                                                                                                                                                              }' data-current-styles='{
-                                                                                                                                                                                                                                                                                                                                "imageOverlayOpacity": 0.15,
-                                                                                                                                                                                                                                                                                                                                "backgroundWidth": "background-width--full-bleed",
-                                                                                                                                                                                                                                                                                                                                "sectionHeight": "section-height--small",
-                                                                                                                                                                                                                                                                                                                                "customSectionHeight": 1,
-                                                                                                                                                                                                                                                                                                                                "horizontalAlignment": "horizontal-alignment--center",
-                                                                                                                                                                                                                                                                                                                                "verticalAlignment": "vertical-alignment--middle",
-                                                                                                                                                                                                                                                                                                                                "contentWidth": "content-width--wide",
-                                                                                                                                                                                                                                                                                                                                "customContentWidth": 50,
-                                                                                                                                                                                                                                                                                                                                "sectionTheme": "light",
-                                                                                                                                                                                                                                                                                                                                "sectionAnimation": "none",
-                                                                                                                                                                                                                                                                                                                                "backgroundMode": "image"
-                                                                                                                                                                                                                                                                                                                              }' data-fluid-engine-section="" data-section-id="6972518c87041e7d0c5ca4b4" data-section-theme="light" data-sqsp-section="fluid-engine" data-test="page-section">
-<div class="section-border" data-controller="SectionDivider" style="clip-path: none;">
-<div class="section-background">
-</div>
-</div>
-<div class="content-wrapper" style="
-      
-        
-      
-    ">
-<div class="content">
-<div data-fluid-engine="true"><style>
-
-.fe-6972518cbfe2bc2d24d6e265 {
-  --grid-gutter: calc(var(--sqs-mobile-site-gutter, 6vw) - 11.0px);
-  --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (8 - 1)) ) / 8 );
-
-  display: grid;
-  position: relative;
-  grid-area: 1/1/-1/-1;
-  grid-template-rows: repeat(10,minmax(24px, auto));
-  grid-template-columns:
-    minmax(var(--grid-gutter), 1fr)
-    repeat(8, minmax(0, var(--cell-max-width)))
-    minmax(var(--grid-gutter), 1fr);
-  row-gap: 11.0px;
-  column-gap: 11.0px;
-  overflow-x: hidden;
-  overflow-x: clip;
-}
-
-@media (min-width: 768px) {
-  .background-width--inset .fe-6972518cbfe2bc2d24d6e265 {
-    --inset-padding: calc(var(--sqs-site-gutter) * 2);
-  }
-
-  .fe-6972518cbfe2bc2d24d6e265 {
-    --grid-gutter: calc(var(--sqs-site-gutter, 4vw) - 11.0px);
-    --cell-max-width: calc( ( var(--sqs-site-max-width, 1500px) - (11.0px * (24 - 1)) ) / 24 );
-    --inset-padding: 0vw;
-
-    --row-height-scaling-factor: 0.0215;
-    --container-width: min(var(--sqs-site-max-width, 1500px), calc(100vw - var(--sqs-site-gutter, 4vw) * 2 - var(--inset-padding) ));
-
-    grid-template-rows: repeat(6,minmax(calc(var(--container-width) * var(--row-height-scaling-factor)), auto));
-    grid-template-columns:
-      minmax(var(--grid-gutter), 1fr)
-      repeat(24, minmax(0, var(--cell-max-width)))
-      minmax(var(--grid-gutter), 1fr);
-  }
-}
-
-
-  .fe-block-yui_3_17_2_1_1769099329585_32855 {
-    grid-area: 4/2/6/10;
-    z-index: 1;
-
-    @media (max-width: 767px) {
-      
-        
-      
-      
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1769099329585_32855 .sqs-block {
-    justify-content: flex-start;
-  }
-
-  .fe-block-yui_3_17_2_1_1769099329585_32855 .sqs-block-alignment-wrapper {
-    align-items: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1769099329585_32855 {
-      grid-area: 2/11/4/17;
-      z-index: 1;
-
-      
-        
-      
-
-      
-    }
-
-    .fe-block-yui_3_17_2_1_1769099329585_32855 .sqs-block {
-      justify-content: flex-start;
-    }
-
-    .fe-block-yui_3_17_2_1_1769099329585_32855 .sqs-block-alignment-wrapper {
-      align-items: flex-start;
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1769099329585_33309 {
-    grid-area: 6/2/8/10;
-    z-index: 2;
-
-    @media (max-width: 767px) {
-      
-        
-      
-      
-    }
-  }
-
-  .fe-block-yui_3_17_2_1_1769099329585_33309 .sqs-block {
-    justify-content: flex-start;
-  }
-
-  .fe-block-yui_3_17_2_1_1769099329585_33309 .sqs-block-alignment-wrapper {
-    align-items: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1769099329585_33309 {
-      grid-area: 4/6/6/22;
-      z-index: 2;
-
-      
-        
-      
-
-      
-    }
-
-    .fe-block-yui_3_17_2_1_1769099329585_33309 .sqs-block {
-      justify-content: flex-start;
-    }
-
-    .fe-block-yui_3_17_2_1_1769099329585_33309 .sqs-block-alignment-wrapper {
-      align-items: flex-start;
-    }
-  }
-
-</style><div class="fluid-engine fe-6972518cbfe2bc2d24d6e265"><div class="fe-block fe-block-yui_3_17_2_1_1769099329585_32855"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css"]' data-block-scripts='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js"]' data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1769099329585_32855" id="block-yui_3_17_2_1_1769099329585_32855"><div class="sqs-block-content"><div class="sqs-text-block-container">
-<div class="sqs-html-content" data-sqsp-text-block-content=""><h2 style="text-align:center;white-space:pre-wrap;">Looking for something?</h2></div>
-<style id="container-styles">#block-yui_3_17_2_1_1769099329585_32855 {
     
-    --stroke-style: none;--stroke-thickness: 6px;
     
       
-      
+        
+        
+        
+        
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C2xS5cZuDVc/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/C2xS5cZuDVc/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/C2xS5cZuDVc/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Nashville Brand &amp; Web Design Studio (@chloeleonardstudio)</a></p></div></blockquote>
+
+        
+        
+        
       
     
+  
+</div>
+</div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_25434" id="block-yui_3_17_2_1_1781107272815_25434"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">The Three Types of Brand Fonts</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Most brand identities use two or three fonts that serve different roles.</p><h3 style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Display or Headline Font</strong></h3><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">This is your most expressive font. It appears at large sizes in headlines, hero sections, and key callouts. Because it's used sparingly, it can have more personality and visual weight without overwhelming your design. This is where you can take creative risks.</p><h3 style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Body Font</strong></h3><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">This font does most of the work. It appears in paragraphs, descriptions, captions, and any long-form text. It needs to be highly legible at small sizes and comfortable to read at length. Personality matters less here than clarity.</p><h3 style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Accent Font (Optional)</strong></h3><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Some brands use a third font , often a script or decorative typeface , for specific moments like pull quotes, signatures, or short callouts. This works when it's used with restraint. An accent font used everywhere quickly becomes clutter.</p></div>
 
---tweak-text-block-background-color: initial;
 
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_25434 {
+    
+    
+    
   }
 
-  #block-yui_3_17_2_1_1769099329585_32855 .sqs-html-content {
+  #block-yui_3_17_2_1_1781107272815_25434 .sqs-html-content {
     
-    --tweak-text-block-padding: 6% 6% 6% 6%;
-  --tweak-text-block-padding: initial;
-}
+    }
 
-  .fe-block-yui_3_17_2_1_1769099329585_32855 {
+  #block-yui_3_17_2_1_1781107272815_25434 {
       mix-blend-mode: var(--tweak-text-block-blend
   );
       border-radius: var(--tweak-text-block-radius);
@@ -3052,35 +2164,28 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
 
   
   
-.fe-block-yui_3_17_2_1_1769099329585_32855 {
-      --tweak-text-block-radius: 0px 0px 0px 0px;
-    }
+
 
 
   
-  .fe-block-yui_3_17_2_1_1769099329585_32855 {
-      --tweak-text-block-blend
-  : normal;
-    }
   
 
-  .fe-block-yui_3_17_2_1_1769099329585_32855 {
-    --blur-value: blur(15px);}
-
+  
 </style>
+
 <style id="override-container-styles">
     @media screen and (max-width: 767px) {
           
             
 
-#block-yui_3_17_2_1_1769099329585_32855 {
+#block-yui_3_17_2_1_1781107272815_25434 {
             
             }
         }
     
   
     @media screen and (max-width: 767px) {
-          #block-yui_3_17_2_1_1769099329585_32855 .sqs-html-content {
+          #block-yui_3_17_2_1_1781107272815_25434 .sqs-html-content {
             
             }
         }
@@ -3093,187 +2198,590 @@ details.archive-block-wrapper .archive-group-name-link:hover{ background:rgba(0,
           
           
         }</style>
+
 <style class="transform-overrides-vars">
+    
+  </style>
+
+
+
+</div>
+</div></div></div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_42308"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_42399" id="block-yui_3_17_2_1_1781107272815_42399"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">How to Choose Fonts That Match Your Brand Personality</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Start by revisiting your brand personality adjectives. The same three-to-five words that guided your color choices should guide your font choices.</p><ul data-rte-list="default"><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>If your brand is sophisticated and high-end:</strong> Look at elegant serifs , think Canela, Playfair Display, or Editorial New. These carry weight and refinement.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>If your brand is clean and modern:</strong> Geometric sans-serifs like Neue Haas Grotesk, Inter, or Aktiv Grotesk tend to read as fresh and professional without being cold.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>If your brand is warm and approachable:</strong> Humanist sans-serifs or soft serifs work well. Fonts with slightly imperfect curves or organic details feel more personal than rigid geometric options.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>If your brand is creative and expressive:</strong> You have more latitude with display fonts, but your body font still needs to stay legible and grounded.</p></li></ul></div>
+
+
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_42399 {
+    
+    
+    
+  }
+
+  #block-yui_3_17_2_1_1781107272815_42399 .sqs-html-content {
+    
+    }
+
+  #block-yui_3_17_2_1_1781107272815_42399 {
+      mix-blend-mode: var(--tweak-text-block-blend
+  );
+      border-radius: var(--tweak-text-block-radius);
+  }
+
+  
+  
+
+
+
+  
+  
+
+  
 </style>
+
+<style id="override-container-styles">
+    @media screen and (max-width: 767px) {
+          
+            
+
+#block-yui_3_17_2_1_1781107272815_42399 {
+            
+            }
+        }
+    
+  
+    @media screen and (max-width: 767px) {
+          #block-yui_3_17_2_1_1781107272815_42399 .sqs-html-content {
+            
+            }
+        }
+    
+  @media screen and (max-width: 767px) {
+          
+          
+
+          
+          
+          
+        }</style>
+
+<style class="transform-overrides-vars">
+    
+  </style>
+
+
+
 </div>
-</div></div></div><div class="fe-block fe-block-yui_3_17_2_1_1769099329585_33309"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-search" data-block-css='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.search/b9d22159-fe6b-4b3a-a965-7fadd191d721_374/website.components.search.styles.css"]' data-block-scripts='["https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.search/b9d22159-fe6b-4b3a-a965-7fadd191d721_374/website.components.search.visitor.js"]' data-block-type="1337" data-definition-name="website.components.search" data-sqsp-block="search" data-website-component-id="yui_3_17_2_1_1769099329585_33309" id="block-yui_3_17_2_1_1769099329585_33309"><div class="sqs-block-content"><div class="sqs-search-wrapper" component-data-strings='{"inputLabel":"Search","noCollectionSelected":"You must select a collection to search on","noResults":"No results found"}'>
-<div class="sqs-search-ui-text-input sqs-search-ui-button-wrapper color-dark" data-collection="6877c2a916694401ad2dcee8" data-collectionfilter="true" data-preview="true" data-source="block">
-<div class="spinner-wrapper hide">
-<div class="sqs-spin dark default">
-<div class="sqs-spin-content"></div>
+</div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_44329"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_44402" id="block-yui_3_17_2_1_1781107272815_44402"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">What to Avoid</h2><ul data-rte-list="default"><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Pairing two fonts with similar personalities. </strong>When a headline serif and a body serif feel too similar, the result is visually flat. Some contrast between your fonts , in weight, style, or structure , creates visual hierarchy.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Trendy fonts without longevity. </strong>Some typefaces are everywhere right now. That visibility fades, and a dated font can make your brand feel stale far sooner than your actual design needs a refresh.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Free fonts without considering licensing. </strong>Many free fonts are not licensed for commercial use. Always check licensing before using a font in your brand identity.</p></li><li><p style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>Choosing fonts in isolation. </strong>A font that looks great in a specimen can feel wrong when combined with your color palette or paired with your logo. Always test fonts in context, not on a blank white background.</p></li></ul></div>
+
+
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_44402 {
+    
+    
+    
+  }
+
+  #block-yui_3_17_2_1_1781107272815_44402 .sqs-html-content {
+    
+    }
+
+  #block-yui_3_17_2_1_1781107272815_44402 {
+      mix-blend-mode: var(--tweak-text-block-blend
+  );
+      border-radius: var(--tweak-text-block-radius);
+  }
+
+  
+  
+
+
+
+  
+  
+
+  
+</style>
+
+<style id="override-container-styles">
+    @media screen and (max-width: 767px) {
+          
+            
+
+#block-yui_3_17_2_1_1781107272815_44402 {
+            
+            }
+        }
+    
+  
+    @media screen and (max-width: 767px) {
+          #block-yui_3_17_2_1_1781107272815_44402 .sqs-html-content {
+            
+            }
+        }
+    
+  @media screen and (max-width: 767px) {
+          
+          
+
+          
+          
+          
+        }</style>
+
+<style class="transform-overrides-vars">
+    
+  </style>
+
+
+
 </div>
+</div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_67874"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_67936" id="block-yui_3_17_2_1_1781107272815_67936"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true" id="yui_3_17_2_1_1781107272815_67919">How Many Fonts Does a Brand Need?</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">Two to three is the right range for most brands. One headline font plus one body font is clean and intentional. Adding a third accent font is fine if it serves a specific purpose. More than three is usually a sign that the brand identity needs more structure, not more variety.</p><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">Font Pairing That Works</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">The easiest pairing formula: a serif headline with a sans-serif body, or vice versa. The contrast creates natural hierarchy without visual tension. Both fonts should share some tonal quality , a high-contrast editorial serif will clash with a rounded, playful sans-serif even if the sizes and weights are right.</p><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">Typography Is Part of a Complete System</h2><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">At CL Studio, we treat typography as one piece of a complete <a href="../services-menu.html"><u>brand identity</u></a> , not a standalone decision. Your fonts need to work with your colors, your photography style, your logo, and your brand voice. When all of those elements are working together, your brand doesn't just look good. It feels unmistakably like you.</p><p style="white-space:pre-wrap;" data-rte-preserve-empty="true">If you're building a brand identity and want it done with strategy behind every decision, <a href="../contact.html"><u>let's talk</u></a>.</p></div>
+
+
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_67936 {
+    
+    
+    
+  }
+
+  #block-yui_3_17_2_1_1781107272815_67936 .sqs-html-content {
+    
+    }
+
+  #block-yui_3_17_2_1_1781107272815_67936 {
+      mix-blend-mode: var(--tweak-text-block-blend
+  );
+      border-radius: var(--tweak-text-block-radius);
+  }
+
+  
+  
+
+
+
+  
+  
+
+  
+</style>
+
+<style id="override-container-styles">
+    @media screen and (max-width: 767px) {
+          
+            
+
+#block-yui_3_17_2_1_1781107272815_67936 {
+            
+            }
+        }
+    
+  
+    @media screen and (max-width: 767px) {
+          #block-yui_3_17_2_1_1781107272815_67936 .sqs-html-content {
+            
+            }
+        }
+    
+  @media screen and (max-width: 767px) {
+          
+          
+
+          
+          
+          
+        }</style>
+
+<style class="transform-overrides-vars">
+    
+  </style>
+
+
+
 </div>
-<input aria-label="Search" class="search-input" placeholder="Search" type="search" value=""/>
+</div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" data-sqsp-block="line" id="block-yui_3_17_2_1_1781107272815_12986"><div class="sqs-block-content"><hr /></div></div><div class="row sqs-row"><div class="col sqs-col-4 span-4"><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="104.62962962962963" data-block-type="5" data-sqsp-block="image-classic" id="block-yui_3_17_2_1_1781107272815_15202"><div class="sqs-block-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+  
+    <div
+        class="
+          image-block-outer-wrapper
+          layout-caption-below
+          design-layout-inline
+          combination-animation-site-default
+          individual-animation-site-default
+          individual-text-animation-site-default
+        "
+        data-test="image-block-inline-outer-wrapper"
+        data-sqsp-image-classic-block-layout="inline"
+    >
+
+      
+
+      
+        <figure
+            class="
+              sqs-block-image-figure
+              intrinsic
+            "
+            style="max-width:1024px;"
+        >
+          
+        
+        
+
+        
+          
+            
+          <div
+              
+              
+              class="image-block-wrapper"
+              data-animation-role="image"
+              
+  
+
+          >
+            <div data-sqsp-image-classic-block-image-container class="sqs-image-shape-container-element
+              
+          
+        
+              has-aspect-ratio
+            " style="
+                position: relative;
+                
+                  padding-bottom:104.62963104248047%;
+                
+                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+              "
+              >
+                
+                
+                
+                
+                
+                
+                
+                <img data-stretch="false" data-src="assets/_placeholder.svg" data-image="assets/_placeholder.svg" data-image-dimensions="1024x1280" data-image-focal-point="0.5,0.5" alt="how to choose brand fonts" data-load="false" elementtiming="system-image-block" data-sqsp-image-classic-block-image src="assets/_placeholder.svg" width="1024" height="1280" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 33.33333333333333vw, 33.33333333333333vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" loading="lazy" decoding="async" data-loader="sqs">
+
+            </div>
+          </div>
+        
+          
+        
+
+        
+      
+        </figure>
+      
+
+    </div>
+  
+
+
+  
+
+
+</div></div></div><div class="col sqs-col-8 span-8"><div class="sqs-block website-component-block sqs-block-website-component sqs-block-html html-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.html/52d1a711-0e92-40da-8ecc-54ccd21f3988_665/website.components.html.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.html" data-sqsp-block="text" data-website-component-id="yui_3_17_2_1_1781107272815_13636" id="block-yui_3_17_2_1_1781107272815_13636"><div class="sqs-block-content"><div class="sqs-text-block-container">
+  
+  <div class="sqs-html-content" data-sqsp-text-block-content><h2 style="white-space:pre-wrap;" data-rte-preserve-empty="true">Hi there! I’m so glad you found us in this corner of the internet.</h2><p class="sqsrte-large preFade fadeIn" style="white-space:pre-wrap;" data-rte-preserve-empty="true"><strong>I'm </strong><a href="#"><strong>Chloe Leonard</strong></a><strong>, the founder of CL Studio, a </strong><a href="../creative-agency-for-small-business.html"><strong>boutique creative agency based in Nashville, TN. </strong></a>After 10 years of working with hundreds of clients, including Almost 30 Podcast, Clearstem Skincare, Harper Collins, and Free People, I've become more passionate than ever about giving founders the clarity and tools to build brands that TRULY stand out.</p><p class="p2 preFade fadeIn" style="white-space:pre-wrap;" data-rte-preserve-empty="true">We help service-based and eCommerce businesses move from DIY beginnings to fully re<a href="#">alized brands —</a> built with c<a href="../creative-agency-for-small-business.html">onfidence and longevity in</a> mind. Because good brands show up, but great brands own the room for years to come.</p></div>
+
+
+  
+<style id="container-styles">#block-yui_3_17_2_1_1781107272815_13636 {
+    
+    --stroke-style: none;--stroke-thickness: 2px;
+    
+      --tweak-text-block-stroke-color: hsla(var(--black-hsl), 1)
+;
+      
+      
+      
+    
+
+
+
+  }
+
+  #block-yui_3_17_2_1_1781107272815_13636 .sqs-html-content {
+    
+    --tweak-text-block-padding: 6% 6% 6% 6%;
+  --tweak-text-block-padding: initial;
+}
+
+  #block-yui_3_17_2_1_1781107272815_13636 {
+      mix-blend-mode: var(--tweak-text-block-blend
+  );
+      border-radius: var(--tweak-text-block-radius);
+  }
+
+  
+  
+#block-yui_3_17_2_1_1781107272815_13636 {
+      --tweak-text-block-radius: 0px 0px 0px 0px;
+    }
+
+
+  
+  #block-yui_3_17_2_1_1781107272815_13636 {
+      --tweak-text-block-blend
+  : normal;
+    }
+  
+
+  #block-yui_3_17_2_1_1781107272815_13636 {
+    --blur-value: blur(15px);}
+
+</style>
+
+<style id="override-container-styles">
+    @media screen and (max-width: 767px) {
+          
+            
+
+#block-yui_3_17_2_1_1781107272815_13636 {
+            
+            }
+        }
+    
+  
+    @media screen and (max-width: 767px) {
+          #block-yui_3_17_2_1_1781107272815_13636 .sqs-html-content {
+            
+            }
+        }
+    
+  @media screen and (max-width: 767px) {
+          
+          
+
+          
+          
+          
+        }</style>
+
+<style class="transform-vars">
+    #block-yui_3_17_2_1_1781107272815_13636 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+
+      opacity: var(--opacity, 1);
+      transform: translateX(var(--translate-x)) translateY(var(--translate-y)) rotate(var(--rotation)) scale(var(--scale-x), var(--scale-y)) skewX(var(--skew-x)) skewY(var(--skew-y));
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style>
+<style class="transform-overrides-vars">
+    
+  </style>
+
+
+
 </div>
-<style id="sqs-search-preview-styles">
-      .sqs-search-preview-ui {
-        position: absolute;
-        z-index: 999999;
-        background-color: #fff;
-        width: 100%;
-      }
+</div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-button button-block" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/a605d57f-b01c-4fda-a71f-d6ffcc17f149_835/website.components.button.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.button/a605d57f-b01c-4fda-a71f-d6ffcc17f149_835/website.components.button.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.button" data-sqsp-block="button" data-website-component-id="yui_3_17_2_1_1781107272815_24257" id="block-yui_3_17_2_1_1781107272815_24257"><div class="sqs-block-content">
 
-      .sqs-search-preview-ui.hide {
-        display: none;
-      }
 
-      .sqs-search-preview-ui .sqs-search-ui-result {
-        border-top: none;
-        border: 1px solid #ddd;
-      }
 
-      .sqs-search-preview-ui .search-result-notice {
-        background-color: #fff;
-        font-weight: 200;
-        font-size: 12px;
-        padding: 6px 12px;
-        color: #333;
-      }
+  
+    
+    
+      
+      
 
-      .sqs-search-preview-ui .search-result-notice.hide {
-        display: none;
-      }
 
-      .sqs-search-preview-ui .sqs-search-ui-list {
-        max-height: 500px;
-        overflow-x: hidden;
-        overflow-y: scroll;
-      }
 
-      .sqs-search-preview-ui .search-result {
-        padding: 16px;
-        cursor: pointer;
-        border-bottom: 1px solid #ddd;
-        transition: background-color .2s ease-out;
-      }
+<div
+  class="sqs-block-button-container sqs-button-block-container-system_desktop sqs-block-button-container--center "
+  data-animation-role="button"
+  data-button-size="medium"
+  data-button-type="primary"
+  
+>
+  <a
+    href="../contact.html"
+    class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
+    data-sqsp-button
+    
+  >
+    WORK WITH US
+  </a>
+  
 
-      .sqs-search-preview-ui .search-result:last-child {
-        border-bottom: none;
-      }
 
-      .sqs-search-preview-ui .search-result.selected,
-      .sqs-search-preview-ui .search-result:hover {
-        background-color: #f5f5f5;
-      }
 
-      .sqs-search-preview-ui .search-result.selected {
-        outline-color: #333;
-      }
-
-      .sqs-search-preview-ui .sqs-search-ui-item {
-        border-top: none;
-      }
-
-      .sqs-search-preview-ui .sqs-search-ui-item em {
-        color: #222;
-        font-style: italic;
-      }
-
-      .sqs-search-preview-ui .sqs-main-image-container {
-        width: 50px;
-        float: right;
-        margin-left: 5px;
-        box-shadow: #ddd 1px -1px 5px;
-      }
-
-      .sqs-search-preview-ui .sqs-main-image-intrinsic {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%;
-      }
-
-      .sqs-search-preview-ui .sqs-main-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .sqs-search-preview-ui .sqs-title {
-        font-size: 16px;
-        line-height: 1.2em;
-        margin-bottom: 0.5em;
-        color: #333;
-      }
-
-      .sqs-search-preview-ui .sqs-content {
-        font-size: 12px;
-        line-height: 1.4em;
-        color: #333;
-      }
-
-      .sqs-search-preview-ui.no-image .sqs-main-image-container {
-        display: none;
-      }
-    </style>
-<div class="sqs-search-preview-ui hide">
-<div class="sqs-search-ui-result">
-<div class="search-result-notice hide">No results found</div>
-<div class="sqs-search-ui-list"></div>
 </div>
-</div>
-</div></div></div></div></div></div>
-</div>
-</div>
-<div class="section-divider-display" style="
-    --stroke-thickness: 1px;
-    --stroke-dasharray: 0;
-    --stroke-linecap: square;
+
+    
+  
+    
     
       
     
-  ">
+  
+
+
 <style>
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"] {
-      padding-bottom: var(--divider-height);
-      z-index: var(--z-index);
-    }
+  #block-yui_3_17_2_1_1781107272815_24257 {
+    --sqs-block-content-flex: 0;
+  }
 
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"] .background-pause-button {
-      bottom: calc(14px + var(--divider-height));
-    }
+  
+  
+    
+      
+      
+    
+      
+      
+        
+      
+    
+  
+</style>
+<style class="transform-vars">
+    #block-yui_3_17_2_1_1781107272815_24257 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
 
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"] .section-divider-svg-clip {
-      display: none;
-    }
-
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
-      padding-bottom: calc(var(--sqs-site-gutter) + var(--divider-height));
-    }
-
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) .section-background {
-      bottom: calc(var(--sqs-site-gutter) + var(--divider-height));
-    }
-
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"] .section-divider-block {
-      height: var(--divider-height);
+      opacity: var(--opacity, 1);
+      transform: translateX(var(--translate-x)) translateY(var(--translate-y)) rotate(var(--rotation)) scale(var(--scale-x), var(--scale-y)) skewX(var(--skew-x)) skewY(var(--skew-y));
+      transform-origin: var(--origin-x) var(--origin-y);
     }
   </style>
-<style data-section-divider-style="">
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"] {
-      padding-bottom: 6vw;
-    }
-    .has-section-divider[data-section-id="6972518c87041e7d0c5ca4b4"].background-width--inset:not(.content-collection):not(.gallery-section):not(.user-items-list-section) {
-      padding-bottom: calc(var(--sqs-site-gutter) + 6vw);
-    }
+<style class="transform-overrides-vars">
+    
   </style>
-<div class="section-divider-block"></div>
-<svg class="section-divider-svg-clip">
-<clippath clippathunits="objectBoundingBox" id="section-divider-6972518c87041e7d0c5ca4b4">
-<path class="section-divider-clip" d="M0,0"></path>
-</clippath>
-</svg>
-<svg class="section-divider-svg-stroke" preserveaspectratio="none" viewbox="0 0 1 1">
-<path class="section-divider-stroke" d="M-100,0.5 L-100,1.5 M0,1 L1,1" vector-effect="non-scaling-stroke"></path>
-</svg>
-</div>
-</section>
+</div></div></div></div></div></div></div></div>
+
+          <div class="blog-item-injection"><div data-wm-plugin="blog-post"></div>
+
+
+
+
+<style>
+.wm-blog-banner {
+   min-height: 90vh !important;
+}
+</style>
+
+<style>
+  @media(max-width:767px) {
+    .wm-blog-banner{
+      min-height:60vh;
+    }
+  }
+</style></div>
+
+          
+          
+            <div class="blog-item-author-profile-wrapper" data-content-field="author">
+              <a href="#">
+  
+  <span class="author-name">Chloe Leonard</span>
+</a>
+
+
+
+            </div>
+          
+        </div>
+
+        <section class="blog-item-comments">
+          <div class="blog-item-comments-toggle-wrapper">
+            <div id="blogItemCommentsContent" class="blog-item-comments-content" data-content-field="comments">
+              
+            </div>
+          </div>
+        </section>
+      
+    </div>
+  
 </article>
-<section class="item-pagination item-pagination--prev-next" data-collection-type="blog-basic-grid" id="itemPagination">
+
+</div>
+    </div>
+  
+  </div>
+  
 </section>
-</main>
+
+  
+</article>
+
+          
+
+          
+
+          
+            
+
+            
+          
+        
+      </main>
 <footer class="sections" data-footer-sections="" id="footer-sections">
 <section data-test="page-section" data-section-theme="light" class="page-section has-section-divider
     

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#e9e5dd"/>
+  <rect x="1" y="1" width="1198" height="898" fill="none" stroke="#cfc9bd" stroke-width="2"/>
+  <g fill="none" stroke="#b3ab9b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" transform="translate(600,420)">
+    <rect x="-90" y="-66" width="180" height="132" rx="10"/>
+    <circle cx="0" cy="6" r="34"/>
+    <path d="M-58 -40 l22 -26 h72 l22 26"/>
+  </g>
+  <text x="600" y="560" font-family="Helvetica, Arial, sans-serif" font-size="34" letter-spacing="6" fill="#9f9c8e" text-anchor="middle">IMMAGINE SEGNAPOSTO</text>
+</svg>
