@@ -65,33 +65,38 @@
       resetToRoot(menu);
     });
 
-    // The mobile overlay (.header-menu) is hidden by Squarespace with
-    // opacity:0;visibility:hidden and is only revealed by the body class
-    // `header--menu-open`. The inline burger handler in this export only toggles
-    // `sr-nav-open` (which just sets display:block) — not enough to make the menu
-    // visible. So here we mirror the open/closed state onto `header--menu-open`
-    // (the class Squarespace's own CSS already styles) so the overlay actually
-    // appears and animates. This listener runs AFTER the inline one (it is
-    // registered later, from a deferred script), so by the time it reads
-    // `sr-nav-open` the inline toggle has already happened.
-    function syncOverlay() {
-      var open = document.body.classList.contains('sr-nav-open');
-      document.body.classList.toggle('header--menu-open', open);
+    // Open/close controller for the mobile overlay.
+    // The overlay (.header-menu) is hidden by Squarespace (opacity:0;
+    // visibility:hidden) and is only revealed by the `header--menu-open` body
+    // class. IMPORTANT: this export contains TWO .header-burger elements (a
+    // duplicated header), but the page's inline handler only wires the FIRST
+    // one — so tapping the *visible* burger frequently did nothing. We wire
+    // EVERY .header-burger and drive `header--menu-open` ourselves, which is the
+    // single source of truth for visibility (see custom CSS). We bind only to
+    // the outer .header-burger containers (not the inner .burger) so a click
+    // never double-fires and cancels itself.
+    function toggleMenu(e) {
+      if (e) { e.preventDefault(); }
+      var open = document.body.classList.toggle('header--menu-open');
       if (open) {
         document.querySelectorAll('.header-menu').forEach(resetToRoot);
       }
     }
-    var burger = document.querySelector('.header-burger, .burger, [data-test="header-burger"]');
-    if (burger) {
-      burger.addEventListener('click', syncOverlay);
+    var burgers = document.querySelectorAll('.header-burger, [data-test="header-burger"]');
+    if (!burgers.length) {
+      burgers = document.querySelectorAll('.burger');
     }
-    // Safety net: if anything else toggles sr-nav-open, keep the overlay class in sync.
-    if (window.MutationObserver) {
-      new MutationObserver(syncOverlay).observe(document.body, {
-        attributes: true, attributeFilter: ['class']
+    Array.prototype.forEach.call(burgers, function (b) {
+      b.addEventListener('click', toggleMenu);
+    });
+
+    // Tapping a real navigation link (not a folder-open or Back control) closes
+    // the overlay, matching native behaviour.
+    document.querySelectorAll('.header-menu a[href]:not([data-folder-id]):not([data-action])').forEach(function (a) {
+      a.addEventListener('click', function () {
+        document.body.classList.remove('header--menu-open');
       });
-    }
-    syncOverlay();
+    });
   }
 
   if (document.readyState === 'loading') {

@@ -392,8 +392,10 @@ p.sqsrte-small:has(a[href*='decor-check']){ text-align:center !important; }
 /* #2: the mobile overlay menu must keep Squarespace's flex column layout even
    when the inline export rule forces display:block on it. Higher specificity
    (html ...) so it beats the per-page inline <style>. The actual show/hide is
-   driven by the `header--menu-open` body class (set by sr-menu-fix.js). */
-html body.sr-nav-open .header-menu,
+   driven SOLELY by the `header--menu-open` body class (set by sr-menu-fix.js on
+   every .header-burger). We deliberately do NOT key off `sr-nav-open` here: that
+   class is toggled only by the page's inline handler on the FIRST (often hidden)
+   burger, so relying on it caused the visible burger to do nothing / desync. */
 html body.header--menu-open .header-menu {
   display: flex !important;
   opacity: 1 !important;
@@ -418,6 +420,18 @@ html body.header--menu-open .header-menu {
   /* centre the whole footer block stack too, in case the grid cell is narrow */
   #footer-sections .fe-block-f996dec439e8059fa527 .sqs-block-content {
     text-align: center !important;
+  }
+}
+
+/* #3 (real fix): on mobile the button's Fluid-Engine grid CELL is itself
+   off-centre (base grid-area 7/4/9/10 = columns 4-10), so centring the content
+   inside the cell still left it pushed right. Make the cell span the full grid
+   width; combined with the justify-content:center above, the button now sits
+   dead centre. 767px matches Squarespace's mobile Fluid Engine breakpoint. */
+@media only screen and (max-width: 767px) {
+  #footer-sections .fe-block-f996dec439e8059fa527 {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
   }
 }
 
