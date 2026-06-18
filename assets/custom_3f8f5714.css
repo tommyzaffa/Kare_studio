@@ -403,6 +403,38 @@ html body.header--menu-open .header-menu {
   pointer-events: auto !important;
 }
 
+/* #2b: on the INNER pages the open overlay rendered as a short strip at the top
+   ("cut off"). Those pages were exported WITHOUT the Squarespace runtime, so the
+   nav "folder" (position:absolute; min/max-height:100%) had no definite parent
+   height to resolve against and collapsed. Index works because it was captured
+   after the runtime ran (it carries inline heights/padding). We force a definite
+   full-viewport height the whole way down the overlay so the folder fills the
+   screen and scrolls on every page. The .--active override also re-shows the
+   Services sub-folder, which the export nests inside root (where the native
+   ".header-menu-nav-folder .header-menu-nav-folder{display:none}" hid it). */
+html body.header--menu-open .header-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  overflow: hidden !important;
+}
+html body.header--menu-open .header-menu .header-menu-nav,
+html body.header--menu-open .header-menu .header-menu-nav-list {
+  height: 100% !important;
+  min-height: 0 !important;
+  flex: 1 1 auto !important;
+}
+html body.header--menu-open .header-menu .header-menu-nav-folder--active {
+  display: flex !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
 /* #3: centre the footer "WORK WITH US" button on mobile (its block is tagged
    --left, so it sat against the left edge). */
 @media only screen and (max-width: 768px) {
