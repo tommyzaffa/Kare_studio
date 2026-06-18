@@ -44,11 +44,48 @@
     target.classList.remove('header-menu-nav-folder--open');
   }
 
+  // The inner pages were exported with the sub-folders NESTED inside the root
+  // folder, instead of as siblings (the way index — captured after the runtime
+  // ran — has them). When nested, opening a sub-folder slides root to
+  // translateX(-100%) and the child sub-folder inherits that shift, sliding
+  // off-screen too — so the submenu showed up blank/white. Hoist every
+  // sub-folder up to be a sibling of root so the slide transforms are
+  // independent (matching index). No-op when already siblings.
+  function normalizeFolders(menu) {
+    var root = activeRoot(menu);
+    if (!root || !root.parentNode) return;
+    var parent = root.parentNode;
+    menu.querySelectorAll('.header-menu-nav-folder').forEach(function (f) {
+      if (f !== root && f.parentNode !== parent) {
+        parent.appendChild(f);
+      }
+    });
+  }
+
+  // Some inner-page folder links are missing the dropdown arrow markup that
+  // index carries (.header-dropdown-icon + svg). Inject a self-contained chevron
+  // so the arrow shows next to "Services". Skips links that already have one, so
+  // index is untouched.
+  function ensureArrow(a) {
+    var content = a.querySelector('.header-menu-nav-item-content') || a;
+    if (content.querySelector('.header-dropdown-icon')) return;
+    var span = document.createElement('span');
+    span.className = 'header-dropdown-icon sr-injected-arrow';
+    span.setAttribute('aria-hidden', 'true');
+    span.innerHTML = '<svg viewBox="0 0 24 24" width="1em" height="1em" focusable="false">' +
+      '<path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    content.appendChild(span);
+  }
+
   function init() {
     var menus = document.querySelectorAll('.header-menu');
     Array.prototype.forEach.call(menus, function (menu) {
+      // Fix the exported DOM before wiring behaviour.
+      normalizeFolders(menu);
       // Open a sub-folder when its title is tapped.
       menu.querySelectorAll('a[data-folder-id]').forEach(function (a) {
+        ensureArrow(a);
         a.addEventListener('click', function (e) {
           e.preventDefault();
           openFolder(menu, a.getAttribute('data-folder-id'));

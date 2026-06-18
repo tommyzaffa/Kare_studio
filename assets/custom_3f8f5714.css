@@ -435,6 +435,25 @@ html body.header--menu-open .header-menu .header-menu-nav-folder--active {
   -webkit-overflow-scrolling: touch !important;
 }
 
+/* #2c: arrow injected by sr-menu-fix.js next to "Services" on the inner pages
+   (they ship without the native icon markup). Give it a definite size and keep
+   it a stroked chevron — the native ".header-dropdown-icon svg" rule otherwise
+   fills the path solid. */
+.header-dropdown-icon.sr-injected-arrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: .7em !important;
+  height: .7em !important;
+  margin-left: .5em !important;
+  flex: 0 0 auto !important;
+}
+.header-dropdown-icon.sr-injected-arrow svg {
+  width: 100% !important;
+  height: 100% !important;
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
 /* #3: centre the footer "WORK WITH US" button on mobile (its block is tagged
    --left, so it sat against the left edge). */
 @media only screen and (max-width: 768px) {
