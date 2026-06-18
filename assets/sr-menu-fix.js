@@ -82,9 +82,15 @@
         document.querySelectorAll('.header-menu').forEach(resetToRoot);
       }
     }
-    var burgers = document.querySelectorAll('.header-burger, [data-test="header-burger"]');
+    // Bind exactly ONE element per burger. The clickable <button> (class
+    // .burger / [data-test="header-burger"]) lives INSIDE the .header-burger
+    // container, so a tap on the button already bubbles up to the container.
+    // Binding both would run toggleMenu twice for one tap and cancel itself,
+    // which is why the menu never opened. Prefer the outer container; only fall
+    // back to the inner button if no container exists.
+    var burgers = document.querySelectorAll('.header-burger');
     if (!burgers.length) {
-      burgers = document.querySelectorAll('.burger');
+      burgers = document.querySelectorAll('[data-test="header-burger"], .burger');
     }
     Array.prototype.forEach.call(burgers, function (b) {
       b.addEventListener('click', toggleMenu);
