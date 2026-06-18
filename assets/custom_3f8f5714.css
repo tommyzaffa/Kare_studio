@@ -245,3 +245,144 @@ p.sqsrte-small:has(a[href*='decor-check']){ text-align:center !important; }
   .sr-svc-hover__stage{ position:static; width:100%; order:-1; }
   .sr-svc-hover__list{ width:100%; }
 }
+
+/* =====================================================================
+   MOBILE BUG FIXES — added 2026-06-18
+   Scoped overrides for reported mobile issues. Appended at end so they
+   win the cascade. Desktop is largely untouched (most rules are mobile
+   media queries; the arrow restyle #5 is intentionally global).
+   ===================================================================== */
+
+/* ---------- #5: Review/carousel arrows = minimal arrows, NO circles ----------
+   Remove the round background/border on every arrow variant (desktop arrows,
+   mobile arrows, banner-slideshow arrows). Keep only the slim arrow glyph and
+   shrink the hit-area so the arrows no longer sit on top of the review text. */
+.user-items-list-carousel .user-items-list-carousel__arrow-icon-background,
+.user-items-list-carousel .user-items-list-carousel__arrow-icon-background-area,
+.user-items-list-carousel .mobile-arrow-icon-background,
+.user-items-list-carousel .mobile-arrow-icon-background-area,
+.user-items-list-banner-slideshow .mobile-arrow-icon-background,
+.user-items-list-banner-slideshow .mobile-arrow-icon-background-area,
+.user-items-list-banner-slideshow .user-items-list-banner-slideshow__arrow-icon-background,
+.user-items-list-banner-slideshow .user-items-list-banner-slideshow__arrow-icon-background-area {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;            /* hide the circle, leave the arrow */
+}
+/* Shrink the clickable area so the (now circle-less) arrows are compact */
+.user-items-list-carousel .user-items-list-carousel__arrow-button {
+  width: 32px !important;
+  height: 32px !important;
+}
+.user-items-list-carousel .mobile-arrow-button,
+.user-items-list-banner-slideshow .mobile-arrow-button {
+  width: 30px !important;
+  height: 30px !important;
+}
+/* Slim, minimal arrow glyph */
+.user-items-list-carousel .user-items-list-carousel__arrow-icon {
+  width: 22px !important;
+  height: 22px !important;
+}
+.user-items-list-carousel .mobile-arrow-icon,
+.user-items-list-banner-slideshow .mobile-arrow-icon {
+  width: 18px !important;
+  height: 18px !important;
+}
+.user-items-list-carousel .user-items-list-carousel__arrow-icon-path,
+.user-items-list-carousel .mobile-arrow-icon-path,
+.user-items-list-carousel .user-items-list-carousel__arrow-icon-foreground {
+  stroke-width: 1.5px !important;
+}
+
+/* ---------- #4: divider after the hero renders as a wide grey bar on mobile ----
+   On desktop section 689904… uses .vertical-line as a tall 1px vertical divider.
+   The mobile rule turns it into a 500px-wide / 1px-tall horizontal bar that
+   overflows a phone screen and looks like a glitch. Hide it on mobile, and as a
+   safety net never let any .vertical-line* divider exceed the viewport width. */
+@media only screen and (max-width: 768px) {
+  section[data-section-id="689904704599422d4aa4ec7f"] .vertical-line { display: none !important; }
+  [class^="vertical-line"],
+  [class*=" vertical-line"] { max-width: 100% !important; box-sizing: border-box !important; }
+}
+
+/* ---------- #3: footer "WORK WITH US" button overflows the screen on mobile ---- */
+@media only screen and (max-width: 768px) {
+  #footer-sections .sqs-block-button-container { max-width: 100% !important; box-sizing: border-box !important; }
+  #footer-sections .sqs-block-button-element,
+  #footer-sections .sqs-button-element--primary,
+  #footer-sections .sqs-button-element--secondary {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;   /* allow the label to wrap instead of overflowing */
+    overflow-wrap: anywhere;
+  }
+  #footer-sections .fe-block { min-width: 0 !important; }
+}
+
+/* ---------- #6: blog "CATEGORIES" dropdown options spill off-screen ----------
+   The archive block (a <details> disclosure) opens a list that runs past the
+   right edge near the footer. Keep it inside the viewport and single-column. */
+@media only screen and (max-width: 768px) {
+  details.archive-block-wrapper.archive-block-setting-layout-dropdown {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sqs-block-archive .archive-block-setting-layout-dropdown .archive-group-list {
+    columns: auto !important;
+    column-count: 1 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere;
+  }
+  .sqs-block-archive .archive-block-setting-layout-dropdown .archive-group,
+  .sqs-block-archive .archive-block-setting-layout-dropdown .archive-group-name-link {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+}
+
+/* ---------- #7: service "option" cards overflow on the 3 service pages -------- */
+@media only screen and (max-width: 768px) {
+  .user-items-list-carousel.sr-svc-grid,
+  .sr-svc-grid .user-items-list-carousel__slides,
+  .sr-svc-grid .user-items-list-carousel__slide,
+  .sr-svc-hover,
+  .sr-svc-hover__list,
+  .sr-svc-hover__opt {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .sr-svc-grid .user-items-list-carousel__slides,
+  .user-items-list-carousel.sr-svc-grid:not(.sn-cc-original) .user-items-list-carousel__slides:not(.sr-marquee) {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* #1: reviews carousel — no empty slot at the far left/right on mobile.
+   Cause: slides were ~86vw wide with centered scroll-snap and a large
+   inter-slide gap, so the first/last snap positions exposed a blank gutter
+   (read by the user as an empty slide). On mobile show exactly one review
+   per view (full width) so there is no side gutter and nothing to over-scroll
+   into. Desktop is untouched. */
+@media only screen and (max-width: 768px) {
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__slides:not(.sr-marquee) {
+    gap: 16px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    scroll-padding-left: 0 !important;
+    scroll-padding-right: 0 !important;
+  }
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__slide {
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+  }
+  .user-items-list-carousel:not(.sn-cc-original)[data-is-card-enabled="true"] .user-items-list-carousel__slide,
+  .user-items-list-carousel:not(.sn-cc-original)[data-is-card-enabled="false"] .user-items-list-carousel__slide {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
