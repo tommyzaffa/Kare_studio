@@ -65,15 +65,33 @@
       resetToRoot(menu);
     });
 
-    // When the burger is tapped, reset the menu to its root view so reopening
-    // never shows a previously-opened sub-folder. This only resets folder
-    // state; it never toggles sr-nav-open (handled elsewhere).
+    // The mobile overlay (.header-menu) is hidden by Squarespace with
+    // opacity:0;visibility:hidden and is only revealed by the body class
+    // `header--menu-open`. The inline burger handler in this export only toggles
+    // `sr-nav-open` (which just sets display:block) — not enough to make the menu
+    // visible. So here we mirror the open/closed state onto `header--menu-open`
+    // (the class Squarespace's own CSS already styles) so the overlay actually
+    // appears and animates. This listener runs AFTER the inline one (it is
+    // registered later, from a deferred script), so by the time it reads
+    // `sr-nav-open` the inline toggle has already happened.
+    function syncOverlay() {
+      var open = document.body.classList.contains('sr-nav-open');
+      document.body.classList.toggle('header--menu-open', open);
+      if (open) {
+        document.querySelectorAll('.header-menu').forEach(resetToRoot);
+      }
+    }
     var burger = document.querySelector('.header-burger, .burger, [data-test="header-burger"]');
     if (burger) {
-      burger.addEventListener('click', function () {
-        document.querySelectorAll('.header-menu').forEach(function (menu) { resetToRoot(menu); });
+      burger.addEventListener('click', syncOverlay);
+    }
+    // Safety net: if anything else toggles sr-nav-open, keep the overlay class in sync.
+    if (window.MutationObserver) {
+      new MutationObserver(syncOverlay).observe(document.body, {
+        attributes: true, attributeFilter: ['class']
       });
     }
+    syncOverlay();
   }
 
   if (document.readyState === 'loading') {

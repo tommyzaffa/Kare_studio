@@ -386,3 +386,60 @@ p.sqsrte-small:has(a[href*='decor-check']){ text-align:center !important; }
     box-sizing: border-box !important;
   }
 }
+
+/* ===== ROUND 2 FIXES (2026-06-18) ===== */
+
+/* #2: the mobile overlay menu must keep Squarespace's flex column layout even
+   when the inline export rule forces display:block on it. Higher specificity
+   (html ...) so it beats the per-page inline <style>. The actual show/hide is
+   driven by the `header--menu-open` body class (set by sr-menu-fix.js). */
+html body.sr-nav-open .header-menu,
+html body.header--menu-open .header-menu {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* #3: centre the footer "WORK WITH US" button on mobile (its block is tagged
+   --left, so it sat against the left edge). */
+@media only screen and (max-width: 768px) {
+  #footer-sections .sqs-block-button-container,
+  #footer-sections .sqs-block-button-container--left {
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+  #footer-sections .sqs-block-button-container > .sqs-block-button-element,
+  #footer-sections .sqs-block-button-container > a {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* centre the whole footer block stack too, in case the grid cell is narrow */
+  #footer-sections .fe-block-f996dec439e8059fa527 .sqs-block-content {
+    text-align: center !important;
+  }
+}
+
+/* #1: belt-and-suspenders for the reviews carousel — force one full-width review
+   per view on mobile and forbid any over-scroll past the first/last slide so no
+   blank gutter ("empty slot") can appear at either extreme. */
+@media only screen and (max-width: 768px) {
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__slides:not(.sr-marquee) {
+    overscroll-behavior-x: contain !important;
+    justify-content: flex-start !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__slide {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: center !important;
+  }
+  /* the carousel wrapper / gutter must not add side padding that reads as a gap */
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__gutter,
+  .user-items-list-carousel:not(.sn-cc-original) .user-items-list-carousel__slides-revealer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
